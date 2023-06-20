@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-06-20T19:57:03.373+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-06-20T21:19:38.691+02:00"}
 ---
 
 
@@ -27,11 +27,9 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 ## Functions
 
-In this section, we discuss how functions, operators, and constants are defined.
+In this section, we discuss functions, operators, and constants.
 
-Start reading: [[functions/Defining a Function\|Defining a Function]]
-
-[[Local Scopes#Let Expressions\|Local Scopes#Let Expressions]]
+Start reading: [[Functions\|Functions]]
 
 ---
 
