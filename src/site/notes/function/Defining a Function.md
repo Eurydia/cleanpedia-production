@@ -3,6 +3,7 @@
 ---
 
 
+
 ## Implementing a Function
 
 A simple function definition consists of one or more function implementations.
