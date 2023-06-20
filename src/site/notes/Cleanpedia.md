@@ -29,9 +29,9 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 In this section, we discuss how functions, operators, and constants are defined.
 
-Start reading: [Defining a Function](function/Defining%20a%20Function.md)
+Start reading: [[function/Defining a Function\|Defining a Function]]
 
-[Local Scopes](Local%20Scopes.md)
+[[Local Scopes#Let Expressions\|Local Scopes#Let Expressions]]
 
 ---
 
