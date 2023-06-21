@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-06-20T21:19:38.691+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-06-20T21:41:08.233+02:00"}
 ---
 
 
@@ -29,7 +29,7 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 In this section, we discuss functions, operators, and constants.
 
-Start reading: [[Functions\|Functions]]
+See [[Functions\|Functions]].
 
 ---
 
