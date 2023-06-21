@@ -1,40 +1,50 @@
 ---
-{"dg-publish":true,"permalink":"/functions/implementing-a-function/","created":"2023-06-20T18:37:36.405+02:00","updated":"2023-06-20T21:18:29.009+02:00"}
+{"dg-publish":true,"permalink":"/functions/implementing-a-function/","created":"2023-06-20T18:37:36.405+02:00","updated":"2023-06-20T22:42:36.605+02:00"}
 ---
 
 
-Let's discuss what a function implementation looks like.
+# Implementing a Function
+
+To implement  a function, we need to know what a function implementation looks like first.
 
 ## Control Forms of a Function Implementation
 
-A control form of a function implementation with one parameter is written as follows.
+A control form of a function implementation is written as follows.
 
 ```
 // Language: Clean
  
-name param = expr
+identifier paramSeq = body
 ```
 
-A control form of a function implementation with two parameters is written as follows.
+More specifically, a function implementation consists of three components.
 
-```
-// Language: Clean
+| Component    | Description                                                                             |
+| ------------ | --------------------------------------------------------------------------------------- |
+| `identifier` | The function name.                                                                      |
+| `paramSeq`   | A fixed sequence of space-separated parameters. They can be referenced by `body`. |
+| `body`       | An expression. It is evaluated when the function call is made.                          |
 
-name paramA paramB = expr
-```
+### Extending Parameters 
 
-That is parameters are space-separated.
+A parameter of a function can be a simple variable name, a literal.
+When a literal is used as a parameter, it invokes a special behavior which is discussed later part of this page.
 
-### Implementation Rules
+If a parameter represents a structured datatype, it can be replaced by a destructuring pattern.
+See [[functions/Destructuring Patterns\|Destructuring Patterns]].
 
-Implementations of a function must follow [[functions/Implementation Rules\|specific rules]].
-Violation of these rules results in a compile-time error.
-
-### Extending the Expression of a Function Implementation
+### Extending Expression
 
 A function implementation has ownership over one expression.
 
 By introducing [[functions/Guarded Expressions\|guarded expressions]], a function implementation can have ownership over multiple guarded expressions, instead of one ordinary expression.
+
+---
+
+## Function Implementation Rules
+
+Function implementations must follow [[functions/Implementation Rules\|specific rules]].
+Violation of these rules results in a compile-time error.
 
 ---
 
