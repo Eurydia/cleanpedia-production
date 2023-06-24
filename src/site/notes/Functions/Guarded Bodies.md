@@ -1,10 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T18:37:36.403+02:00","updated":"2023-06-23T14:29:25.402+02:00"}
+{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T18:37:36.403+02:00","updated":"2023-06-23T23:02:37.760+02:00"}
 ---
 
 
 Guarded bodies allows a function implementation to have multiple bodies.
-Let's discuss what they look like.
 
 A control function implementation with one guarded body is written as follows.
 
@@ -13,14 +12,14 @@ identifier paramSeq
 | guard = body
 ```
 
-More precisely, a guarded body consists of two components.
+A guarded body consists of two components.
 
-| Component    | Description                        |
-| ------------ | ---------------------------------- |
-| `identifier` | A function name.                   |
-| `paramSeq`   | A fixed-length parameter sequence. |
-| `guard`      | A Boolean expressions.             |
-| `body`       | An expression to be evaluated.     |
+| Component    | Description                                        |
+| ------------ | -------------------------------------------------- |
+| `identifier` | A function name.                                   |
+| `paramSeq`   | A fixed-length space-separated parameter sequence. |
+| `guard`      | A Boolean expressions.                             |
+| `body`       | An expression to be evaluated.                     |
 
 A control function implementation with three guarded body is written as follows.
 
