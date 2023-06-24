@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T18:37:36.403+02:00","updated":"2023-06-23T23:02:37.760+02:00"}
+{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T18:37:36.403+02:00","updated":"2023-06-24T15:19:28.909+02:00"}
 ---
 
 
@@ -91,7 +91,7 @@ Let's call signum with 0 to investigate this procedure.
 signum 0  // ?
 ```
 
-The function is defined with two function implementations, so need to  [[Functions/Function Implementation#Selecting a Function Implementation To Be Evaluated\|determine which one is selected]].
+The function is defined with two function implementations, so need to  [[Functions/Control Form of Function Implementation#Selecting a Function Implementation To Be Evaluated\|determine which one is selected]].
 
 The first function implementation is tried.
 The parameter matches the argument.
