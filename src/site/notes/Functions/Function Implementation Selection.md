@@ -1,16 +1,25 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-selection/","created":"2023-06-23T22:49:38.415+02:00","updated":"2023-06-23T22:51:10.139+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-selection/","tags":["function-implementation","function-implementation-selection"],"created":"2023-06-23T22:49:38.415+02:00","updated":"2023-06-24T11:15:53.271+02:00"}
 ---
 
 
-A function definition often contains multiple function implementations.
-When a function is called, only one function implementation can be selected.
+# Function Implementation Selection
 
-To determine which function implementation should be selected, a procedure is written as follows.
+A function can be defined with multiple function implementations.
+Only one of those function implementations can be selected.
 
-> [!quote]
-> *Implementations are tried in descending order.*
-> *The first implementation, whose parameters match with every argument, is selected.*
+> [!important]
+> Implementations are tried in descending order.
+> The first implementation, whose parameters match with every argument, is selected.
+
+Jump to [[Functions/Function Implementation Selection#Demonstration Function Implementation Selection Procedure\|#Demonstration Function Implementation Selection Procedure]] to see the steps in action.
+
+> [!warning]
+> When no function implementation can be selected, the function call results in a run-time error 
+
+Jump to  
+
+## Demonstration: Function Implementation Selection Procedure
 
 To demonstrate, a function called `safeDivide` is described as follows:
 - accepts two integers as arguments, 
@@ -41,7 +50,7 @@ Let's call `safeDivide` with 9 and 6 to investigate.
 safeDivide 9 6  // ?
 ```
 
-Apply the procedure to determine which function implementation should be selected.
+Follow the procedure to determine which function implementation should be selected.
 
 The first function implementation is tried.
 The first parameter matches the first argument.
@@ -110,13 +119,7 @@ The result is obtained from the body of the first function implementation, which
 safeDivide 9 0  // 0
 ```
 
-> [!important]
-> This behavior does not perform equality checks.
-
-## Function Implementation Order
-
-If implementation order is changed, `safeDivide` would have unintended behaviors.
-
+If implementation order has been changed, `safeDivide` would have unintended behaviors.
 To demonstrate, let's swap the implementation order of `safeDivide` around.
 
 ```Clean
@@ -136,9 +139,7 @@ safeDivide 9 0  // Uh oh
 
 ---
 
-## No Valid Candidate for Selection
-
-If no function implementation is able to be selected, the function call results in a run-time error.
+## Demonstration: No Function Implementation Is Selected
 
 To demonstrate, a function called `isPrime` is described as follows:
 - accepts one integer, and
@@ -152,7 +153,7 @@ isPrime 2  // True
 isPrime 3  // True
 ```
 
-The function is defined in one of the worst way possible for the sake of demonstration.
+The function is crudely defined for the sake of demonstration.
 
 ```Clean
 // Language: Clean
@@ -162,9 +163,9 @@ isPrime 2 = True
 isPrime 3 = True
 ```
 
-The function definition does, in fact, behave as intended but only with integers between 1 and 3, inclusive.
+It behaves as intended but only with integers between 1 and 3, inclusive.
 
-Let's investigate further by calling `isPrime` with 6.
+Let's investigate by calling `isPrime` with 6.
 
 ```Clean
 // Language: Clean
@@ -199,14 +200,11 @@ The parameter does not match the argument.
 
 The third function implementation is not selected.
 
-At this point, we have exhausted every implementation of `isPrime` but none of them was selected.
-Since a result cannot be obtained from any function implementation, it  defaults to a run-time error.
+We have exhausted every implementation of `isPrime` but none of them was selected.
+Since a result cannot be obtained from any function implementation, it defaults to a run-time error.
 
 ```Clean
 // Language: Clean
 
 isPrime 6  // Uh oh
 ```
-
-More precisely, `isPrime` is [[Functions/Partial Functions\|partially defined]].
-
