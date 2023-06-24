@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-selection/","tags":["function-implementation","function-implementation-selection"],"created":"2023-06-23T22:49:38.415+02:00","updated":"2023-06-24T11:15:53.271+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-selection/","tags":["function-implementation","function-implementation-selection"],"created":"2023-06-23T22:49:38.415+02:00","updated":"2023-06-24T11:17:57.949+02:00"}
 ---
 
 
@@ -12,7 +12,7 @@ Only one of those function implementations can be selected.
 > Implementations are tried in descending order.
 > The first implementation, whose parameters match with every argument, is selected.
 
-Jump to [[Functions/Function Implementation Selection#Demonstration Function Implementation Selection Procedure\|#Demonstration Function Implementation Selection Procedure]] to see the steps in action.
+Jump to [[Functions/Function Implementation Selection#Function Implementation Selection\|#Function Implementation Selection#Demonstration Function Implementation Selection Procedure]] to see the steps in action.
 
 > [!warning]
 > When no function implementation can be selected, the function call results in a run-time error 
