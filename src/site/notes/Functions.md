@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/functions/","created":"2023-06-20T19:38:59.204+02:00","updated":"2023-06-23T14:07:53.706+02:00"}
+dg-publish: true
 ---
-
 
 ## Defining a Function
 
