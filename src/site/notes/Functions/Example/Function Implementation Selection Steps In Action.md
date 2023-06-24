@@ -1,9 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T11:07:50.699+02:00","updated":"2023-06-24T11:39:34.128+02:00"}
+{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T11:07:50.699+02:00","updated":"2023-06-24T11:42:55.355+02:00"}
 ---
 
-
-#Function #function-implementation #function-implementation-selection #demonstration 
 
 To demonstrate, a function called `safeDivide` is described as follows:
 - accepts two integers as arguments, 
