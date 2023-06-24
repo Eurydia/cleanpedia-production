@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-23T11:18:12.167+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-23T23:04:48.290+02:00"}
 ---
 
 
@@ -10,16 +10,18 @@ Let's discuss what these rules are.
 
 ## Implementation Rule of Naming
 
-*Implementation of a function must share a single name.*
+> [!quote]
+> *Implementation of a function must share a single name.*
 
 Implementations of a function should have the same name.
-More importantly, the name of a function must be unique from other names in the same scope.
+The name of a function must be unique from other names in the same scope.
 
 ---
 
 ## Implementation Rule of Grouping
 
-*Implementations of a function must be together.*
+> [!quote]
+> *Implementations of a function must be together.*
 
 Non-comment entities cannot be placed between implementations of a function.
 
