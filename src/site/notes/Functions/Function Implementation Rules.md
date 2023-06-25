@@ -1,27 +1,27 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-24T16:40:39.150+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-24T23:17:50.253+02:00"}
 ---
 
 
 # Function Implementation Rules
 
-When a function is defined, its function implementations must follow these rules.
+Implementations of a function must follow these rules.
 Violation results in a compile-time error.
 
 Implementations of a function must:
 - be grouped together,
-- share a single identifier, and
-- share a single signature.
+- share a single signature, and
+- share a single identifier.
 
-> [!info]- You have encountered an **example marker**.
-> Proceeding sections aim to provide more explanation.
+In addition, the identifier must be unique from other identifiers in the namespace.
+
+> [!info]
+> The following section is intended to provide examples and insight on each rules.
 
 Let's investigate the rules further starting with the first.
 
 > [!quote]
 > Implementations of a function must be grouped together.
-
-What does the rule implies exactly?
 
 When a function is defined with multiple function implementations, nothing can be placed between them, except comments.
 
@@ -39,50 +39,28 @@ Function implementations of `double` are grouped together.
 
 triple 0 = 0
 // So there's this one book
-triple x = x * 3
+triple x = x * 4
 ```
 
-Function implementations of `triple` are separated by a comment, which is still valid.
+Function implementations of `triple` are separated by a comment, which is an exception.
 
 ```Clean
 // Language: Clean
 
 quadruple 0 = 0
-1 == 1
+1 + 2
 quadruple x = x * 3
 ```
 
-Function implementations of `quadruple` are separated by an expressions.
-According to the first rule, this function definition is invalid.
+Function implementations of `quadruple` are separated by an expression.
+This function definition is invalid.
 
-Not but much can be said about this rule 
+This rule is rather straightforward.
 
-Intuitively, this rule seems almost unnecessary.
-If two function implementations have different names, there is no reason to assume that they are two different functions.
+> [!quote]
+> Functions implementation must share a single signature.
 
-Non-comment entities cannot be placed between implementations of a function.
 
-```Clean
-// Language: Clean
 
-badFunction paramA = ...
-6 + 2
-badFunction paramB = ...
-```
-
-The function definition is invalid because functions implementations are separated by an expression (`6 + 2`).
-
-> [!important] #3
-
-```Clean
-// Language: Clean
-
-badFunction m 0 = False
-badFunction m n = m / n
-```
-
-The first function implementation accepts two integers and returns a Boolean, but the second accepts two integers and return an integer.
-
-The function definition is invalid because function implementations have conflicting signatures.
 
 ---
