@@ -1,22 +1,27 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-24T23:17:50.253+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-26T11:41:33.538+02:00"}
 ---
+
+
+> [!info] Prerequisites
+> To properly understand each implementation rule, understanding of function signatures is required.
+> 
+> See [[Functions/Function Signature\|Function Signature]].
 
 
 # Function Implementation Rules
 
 Implementations of a function must follow these rules.
-Violation results in a compile-time error.
+Violation can result in a compile-time error.
 
 Implementations of a function must:
 - be grouped together,
-- share a single signature, and
+- share a single function signature, and
 - share a single identifier.
 
-In addition, the identifier must be unique from other identifiers in the namespace.
+In addition, the identifier must be unique from other identifiers.
 
-> [!info]
-> The following section is intended to provide examples and insight on each rules.
+## Example
 
 Let's investigate the rules further starting with the first.
 
@@ -25,6 +30,8 @@ Let's investigate the rules further starting with the first.
 
 When a function is defined with multiple function implementations, nothing can be placed between them, except comments.
 
+The function definition of `double` will serve as a benchmark.
+
 ```Clean
 // Language: Clean
 
@@ -32,35 +39,45 @@ double 0 = 0
 double x = x * 2
 ```
 
-Function implementations of `double` are grouped together.
+The definition of `double` are textually grouped together.
+
+Comments can be placed between two function implementations without violating the rule.
+
+```Clean
+// Language: Clean
+
+double 0 = 0
+// So there's this one book
+double x = x * 2
+```
+
+With a benchmark in place, let's see what happens when this rule is violated.
+
+```Clean
+// Language: Clean
+
+badDouble 0 = 0
+1 + 2
+badDouble x = x * 2
+```
+
+It is clear that the definition of `badDouble` is invalid.
+An expression (`1 + 2`) is separating its function implementations.
+
+On an interesting note, if a function definition consists of only one function implementation, this rule would never be violated.
+
+> [!quote]
+> Functions implementation must share a single function signature.
+
+To avoid confusion, let's define a new bench mark function called `triple`.
 
 ```Clean
 // Language: Clean
 
 triple 0 = 0
-// So there's this one book
-triple x = x * 4
+triple x = x * 3 
 ```
 
-Function implementations of `triple` are separated by a comment, which is an exception.
-
-```Clean
-// Language: Clean
-
-quadruple 0 = 0
-1 + 2
-quadruple x = x * 3
-```
-
-Function implementations of `quadruple` are separated by an expression.
-This function definition is invalid.
-
-This rule is rather straightforward.
-
-> [!quote]
-> Functions implementation must share a single signature.
-
-
-
+Both function implementations share a single function signature, which is 
 
 ---
