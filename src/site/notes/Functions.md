@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/functions/","created":"2023-06-20T19:38:59.204+02:00","updated":"2023-07-02T22:59:50.750+02:00"}
 ---
+
 
 ## Defining a Function
 
