@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-06-21T11:01:53.119+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-07T23:06:34.174+02:00"}
 ---
 
 
@@ -31,3 +31,4 @@ In this section, we discuss functions, operators, and constants.
 
 See [[Functions\|Functions]].
 
+[[_content/Appendix A/StdInt\|StdInt]]
