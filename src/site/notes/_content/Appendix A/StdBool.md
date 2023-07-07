@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:20:52.752+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:23:05.153+02:00"}
 ---
 
 
@@ -136,10 +136,13 @@ fromBool    a    => ...
 
 **Usage**
 
+
+
 ```Clean
 // Language: Clean
 
-expr :: {\#Char}
+expr :: {#Char}
 expr =  fromBool True   // "True"
 expr =  fromBool False  // "False"
 ```
+
