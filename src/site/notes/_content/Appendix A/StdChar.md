@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-char/","created":"2023-06-20T18:37:36.390+02:00","updated":"2023-07-07T23:00:17.006+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-char/","created":"2023-06-20T18:37:36.390+02:00","updated":"2023-07-07T23:25:57.798+02:00"}
 ---
 
 
@@ -685,7 +685,7 @@ expr =  fromChar 'a'  // 97
 ```Clean
 // Language: Clean
 
-fromChar :: Char -> {#Char}
+fromChar :: Char -> { #Char }
 fromChar    a    => ...
 ```
 
@@ -696,7 +696,7 @@ fromChar    a    => ...
 ```Clean
 // Language: Clean
 
-expr :: {#Char}
+expr :: { #Char }
 expr =  fromChar '1'  // "1"
 expr =  fromChar 'A'  // "A"
 expr =  fromChar 'a'  // "a"
