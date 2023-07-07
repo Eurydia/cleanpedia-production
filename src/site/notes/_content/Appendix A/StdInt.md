@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-07T23:26:10.658+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-07T23:27:51.357+02:00"}
 ---
 
 
@@ -757,7 +757,7 @@ toInt 'z'  // 122
 // Language: Clean
 
 toInt :: { #Char } -> Int
-toInt    a       => ...
+toInt    a         => ...
 ```
 
 **Behavior**: attempts to parse `a` to an integer.
