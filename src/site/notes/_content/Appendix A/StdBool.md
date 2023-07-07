@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:03:33.896+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:16:48.419+02:00"}
 ---
 
 
@@ -106,7 +106,7 @@ not    a    => ...
 
 **Usage**
 
-```
+```Clean
 // Language: Clean
 
 not True        // False
