@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:16:48.419+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:20:52.752+02:00"}
 ---
 
 
@@ -128,7 +128,7 @@ The desired type must be unambiguous.
 ```Clean
 // Language: Clean
 
-fromBool :: Bool -> {#Char}
+fromBool :: Bool -> {\#Char}
 fromBool    a    => ...
 ```
 
@@ -139,7 +139,7 @@ fromBool    a    => ...
 ```Clean
 // Language: Clean
 
-expr :: {#Char}
+expr :: {\#Char}
 expr =  fromBool True   // "True"
 expr =  fromBool False  // "False"
 ```
