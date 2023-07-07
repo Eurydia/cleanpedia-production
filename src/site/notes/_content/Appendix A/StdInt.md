@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-07T21:10:05.253+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-07T23:26:10.658+02:00"}
 ---
 
 
@@ -756,7 +756,7 @@ toInt 'z'  // 122
 ```Clean
 // Language: Clean
 
-toInt :: {#Char} -> Int
+toInt :: { #Char } -> Int
 toInt    a       => ...
 ```
 
@@ -840,7 +840,7 @@ expr =  fromInt 122  // 'z'
 ```Clean
 // Language: Clean
 
-fromInt :: Int -> {#Char}
+fromInt :: Int -> { #Char }
 fromInt    a   => ...
 ```
 
@@ -851,7 +851,7 @@ fromInt    a   => ...
 ```Clean
 // Language: Clean
 
-expr :: {#Char}
+expr :: { #Char }
 expr =  fromInt 1  // "1"
 expr =  fromInt 0  // "0"
 ```
