@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/appendix-a/std-real/","created":"2023-06-20T18:37:36.396+02:00","updated":"2023-07-07T21:09:59.216+02:00"}
+{"dg-publish":true,"permalink":"/content/appendix-a/std-real/","created":"2023-06-20T18:37:36.396+02:00","updated":"2023-07-07T23:26:13.629+02:00"}
 ---
 
 
@@ -1054,7 +1054,7 @@ expr =  fromReal (-1.9)  // -2
 ```Clean
 // Language: Clean
 
-fromReal :: Real -> {#Char}
+fromReal :: Real -> { #Char }
 fromReal    a    =  ...
 ```
 
@@ -1065,7 +1065,7 @@ fromReal    a    =  ...
 ```Clean
 // Language: Clean
 
-expr :: {#Char}
+expr :: { #Char }
 expr =  fromReal   1.9   // "1.9"
 expr =  fromReal   1.4   // "1.4"
 expr =  fromReal (-1.4)  // "-1.4"
