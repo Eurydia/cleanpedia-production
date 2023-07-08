@@ -1,13 +1,15 @@
 ---
-{"dg-publish":true,"permalink":"/content/primitive-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-07T22:27:26.346+02:00"}
+{"dg-publish":true,"permalink":"/content/primitive-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-08T12:03:00.490+02:00"}
 ---
 
 
 # Integer Type
 
+Integers are represented using 32 bits or 64 bits value depending on the system.
+
 ## Integer Literals
 
-An integer literal can be constructed with decimal notation, octal notation, and hexadecimal notation.
+An integer literal can be constructed with decimal notation, octal notation, or hexadecimal notation.
 
 Integer literals constructed with decimal notation can be written as follows.
 
@@ -39,13 +41,9 @@ Integers literals constructed with hexadecimal notation can be written by prefix
  0xd  // decimal  13
 ```
 
-Integer literals can be used as a **pattern**.
-
-See [[_content/Functions/Pattern Matching/Pattern Matching Integers\|Pattern Matching Integers]] for additional examples.
-
 ## Typing Integer Expressions
 
-An expression, which resolves to integer type, can be explicitly typed using `Int`.
+An expression, which evaluates to integer type, can be explicitly typed using `Int`.
 
 ```Clean
 // Language: Clean
@@ -54,8 +52,10 @@ expr :: Int
 expr =  1 + 1
 ```
 
+## Using Integer Literal as Pattern
+
+See [[_content/Functions/Pattern Matching/Pattern Matching Integers\|Pattern Matching Integers]] for additional examples.
+
 ## Built-In Functions on Integer Type
 
-Functions, which operate on integer type, are defined in `StdInt` module, which is a part of the Standard Environment.
-
-See [[_content/Appendix A/StdInt\|StdInt]] for additional details.
+See [[_content/Appendix A/StdInt\|StdInt]] module for additional information.
