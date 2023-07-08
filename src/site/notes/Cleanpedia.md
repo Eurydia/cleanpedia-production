@@ -1,12 +1,19 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-07T23:06:34.174+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-08T12:03:52.472+02:00"}
 ---
 
+# Cleanpedia
+
+## Preface
+
+Welcome to this collection of notes and examples on CLEAN. 
+This compilation serves as a personal reference that I have created to document and future-proofing my knowledge.
+
+To accomplish that, each topic provides examples, code snippets, and comments.
 
 ## Introduction
 
-The motivation of this reference is to create an accessible, concise, and clear documentation for those who are seeking to learn CLEAN.
-
+This reference 
 The same information can be found on:
 
 - [Cloogle](https://cloogle.org/) which is the language’s search engine, and
@@ -25,10 +32,9 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 ---
 
-## Functions
 
-In this section, we discuss functions, operators, and constants.
+[[_content/Functions\|Functions]]
 
-See [[Functions\|Functions]].
-
-[[_content/Appendix A/StdInt\|StdInt]]
+[[_content/Primitive Types\|Primitive Types]]
+[[_content/Structured Types\|Structured Types]]
+[[_content/User-Defined Types\|User-Defined Types]]
