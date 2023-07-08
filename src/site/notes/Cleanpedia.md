@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-08T12:03:52.472+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-08T18:28:59.949+02:00"}
 ---
 
 # Cleanpedia
@@ -35,6 +35,6 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 [[_content/Functions\|Functions]]
 
-[[_content/Primitive Types\|Primitive Types]]
-[[_content/Structured Types\|Structured Types]]
+[[_content/Predefined Data Types/Primitive Data Types\|Primitive Data Types]]
+[[_content/Predefined Data Types\|Predefined Data Types]]
 [[_content/User-Defined Types\|User-Defined Types]]
