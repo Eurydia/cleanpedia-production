@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/content/predefined-data-types/primitive-data-types/","created":"2023-07-03T09:28:07.494+02:00","updated":"2023-07-08T18:25:27.355+02:00"}
+{"dg-publish":true,"permalink":"/content/predefined-data-types/primitive-data-types/","created":"2023-07-03T09:28:07.494+02:00","updated":"2023-07-08T19:03:32.096+02:00"}
 ---
 
 
