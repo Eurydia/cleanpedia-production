@@ -1,26 +1,24 @@
 ---
-{"dg-publish":true,"permalink":"/content/primitive-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-07T22:30:50.417+02:00"}
+{"dg-publish":true,"permalink":"/content/primitive-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-08T12:02:25.689+02:00"}
 ---
 
 
 # Character Type
 
+Characters are represented using 8 bits values.
+
 ## Character Literal
 
-A character literal is constructed by placing a character inside a pair of single quotation marks (`'..'`).
+Character literals are constructed in the same way by placing a character inside a pair of single quotation marks (`'...'`).
 
 ```Clean
 // Language: Clean
 
+'1'
 'a'
-'9'
-'Z'
+'A'
 '+'
 ```
-
-Character literal can be used as a **pattern**.
-
-See [[_content/Functions/Pattern Matching/Pattern Matching Characters\|Pattern Matching Characters]] for additional examples.
 
 ## Typing Character Expressions
 
@@ -33,8 +31,10 @@ expr :: Char
 expr =  'a'
 ```
 
+## Using Character Literal as Pattern
+
+See [[_content/Functions/Pattern Matching/Pattern Matching Characters\|Pattern Matching Characters]] for additional examples.
+
 ## Built-In Functions on Character Type
 
-Functions, which operate on character type, are defined in `StdChar` module, which is a part of the Standard Environment.
-
-See [[_content/Appendix A/StdChar\|StdChar]] for additional details.
+See [[_content/Appendix A/StdChar\|StdChar]] module for additional information.
