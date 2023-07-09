@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-09T07:15:09.091+02:00"}
+{"dg-publish":true,"permalink":"/cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-09T10:37:01.248+02:00"}
 ---
 
 
@@ -39,6 +39,5 @@ If you notice any mistake or have suggestions for improvements, please feel free
 
 ## Predefined Data Types
 
-See [[_content/Predefined Data Types\|Predefined Data Types]]
+See [[Predefined Data Types\|Predefined Data Types]]
 
-See [[_content/Predefined Data Types/Primitive Data Types/Integer Type#Integer Literals\|Integer Type]]
