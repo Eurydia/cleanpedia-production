@@ -1,17 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-char/","created":"2023-06-20T18:37:36.390+02:00","updated":"2023-07-07T23:25:57.798+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-char/","created":"2023-06-20T18:37:36.390+02:00","updated":"2023-07-10T09:29:23.635+02:00"}
 ---
 
 
 # StdChar
 
-The `StdChar` module contains definitions for operations and functions relating to real number type. 
+The `StdChar` module contains implementations of functions which interact with character type. 
 
-When imported, this module allows for:
+When imported, it allows for:
 - addition and subtraction between characters,
 - comparison between characters,
 - character manipulation,
-- property testing, and
+- usage of predicate functions, and
 - conversion to and from character type.
 
 Visit [StdChar](https://cloogle.org/src/#base-stdenv/StdChar;icl;line=1) on Cloogle for source code of this module.
@@ -47,9 +47,6 @@ one :== (toChar 1)
 ---
 
 ## Arithmetic Operations
-
-Two arithmetic operations are available on character type.
-They are rarely used due to their implementations.
 
 ### Addition
 
@@ -271,10 +268,10 @@ digitToInt    a    => ...
 ```Clean
 // Language: Clean
 
-toUpper '1'  //  1  (49 - 48)
-toUpper 'a'  //  49 (97 - 48)
-toUpper 'A'  //  17 (65 - 48)
-toUpper '-'  // -3  (45 - 48)
+toUpper '1'  // 49 - 48 ->  1
+toUpper 'a'  // 97 - 48 ->  49
+toUpper 'A'  // 65 - 48 ->  17
+toUpper '-'  // 45 - 48 -> -3
 ```
 
 ### `toUpper`
@@ -289,7 +286,8 @@ toUpper    a    => ...
 ```
 
 **Behavior**: returns uppercase of `a`.
-If it is not possible, `a` itself is returned instead.
+
+It returns `a` if not possible.
 
 **Usage**
 
@@ -314,7 +312,8 @@ toLower    a    => ...
 ```
 
 **Behavior**: returns lowercase of `a`.
-If it is not possible, `a` itself is returned instead.
+
+It returns `a` if not possible.
 
 **Usage**
 
@@ -329,7 +328,7 @@ toLower '-'  // '-'
 
 ---
 
-## Property Functions
+## Predicate Functions
 
 ### `isUpper`
 
@@ -514,6 +513,8 @@ isAscii    a    => ...
 
 **Behavior**: returns true if `a` is a 7-bit ASCII character.
 
+The ASCII value of `a` has to be between 0 and 127 inclusive to return true.
+
 See [7-bit ASCII characters](https://en.wikipedia.org/wiki/ASCII) for more information.
 
 **Usage**
@@ -595,7 +596,7 @@ isSpace    a    => ...
 
 **Behavior**: returns true if `a` is a space character.
 
-Space characters includes:
+Space characters include:
 
 | Glyph  | Name            |
 | ------ | --------------- |
@@ -635,7 +636,7 @@ toChar :: Int -> Char
 toChar    a   => ...
 ```
 
-**Behavior**: returns an ASCII character whose value is `a`.
+**Behavior**: returns an ASCII character whose value is equal to `a`.
 
 **Usage**
 
