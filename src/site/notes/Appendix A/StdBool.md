@@ -1,13 +1,13 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-07T23:25:11.681+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-10T09:09:54.193+02:00"}
 ---
 
 
 # StdBool
 
-The `StdBool` module contains implementation for logical operations.
+The `StdBool` module contains implementations for logical operations.
 
-When imported, this module allows for:
+When imported, it allows for:
 - usage of logical operations, and
 - conversion from Boolean type.
 
