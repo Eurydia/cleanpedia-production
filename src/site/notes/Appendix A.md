@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/","created":"2023-06-20T18:37:36.387+02:00","updated":"2023-07-10T14:08:55.143+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/","created":"2023-06-20T18:37:36.387+02:00","updated":"2023-07-10T14:27:21.612+02:00"}
 ---
 
 
 # Appendix A: StdEnv
 
-> [!note] This is a reference note.
-> This note serves as a list to other notes.
+> [!warning] This is a reference note.
+> It serves as a list to other notes.
 
 The Standard Environment includes, but not limited to, the following modules.
 
