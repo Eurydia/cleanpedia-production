@@ -1,17 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-real/","created":"2023-06-20T18:37:36.396+02:00","updated":"2023-07-07T23:26:13.629+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-real/","created":"2023-06-20T18:37:36.396+02:00","updated":"2023-07-10T09:19:49.882+02:00"}
 ---
 
 
 # StdReal
 
-The `StdReal` module contains definitions for operations and functions relating to real number type. 
+The `StdReal` module contains implementations of functions which interact with real number type. 
 
-When imported, this module allows for:
+When imported, it allows for:
 - real number arithmetic,
 - comparison between real numbers,
 - usage of trigonometric function,
-- property testing, and
+- usage of predicate functions, and
 - conversion to and from real number type.
 
 Visit [StdReal](https://cloogle.org/src/#base-stdenv/StdReal;icl;line=1) on Cloogle for source code of this module.
@@ -55,7 +55,7 @@ Infinity ::  Real
 Infinity :== 1E9999
 ```
 
-**Definition**: represents real numbers too large to represents.
+**Definition**: represents numerical values which are too large to represent.
 
 ### Not-A-Number Representation
 
@@ -68,7 +68,7 @@ NaN ::  Real
 NaN :== 1E9999 + (-1E9999)
 ```
 
-**Definition**: represents real numbers which cannot be represented.
+**Definition**: represents numerical values which cannot be represented.
 
 See [NaN](https://en.wikipedia.org/wiki/NaN).
 
@@ -230,7 +230,7 @@ See [NaN](https://en.wikipedia.org/wiki/NaN).
 
 ## Relational Operations
 
-Equality comparison between two real numbers is unaffected by rounding errors.
+Equality comparison between two real numbers seems to be unaffected by rounding errors.
 
 ### Equal To
 
@@ -881,7 +881,7 @@ atanh (-2.5)  //  #NAN
 
 ---
 
-## Property Functions
+## Predicate Functions
 
 ### `isNaN`
 
@@ -1028,7 +1028,9 @@ The desired type must be unambiguous.
 
 **Signature**
 
-```
+```Clean
+// Language: Clean
+
 fromReal :: Real -> Int
 fromReal    a    =  ...
 ```
@@ -1058,7 +1060,7 @@ fromReal :: Real -> { #Char }
 fromReal    a    =  ...
 ```
 
-**Behavior**: converts `a` to a string.
+**Behavior**: returns a string representation of `a`.
 
 **Usage**
 
