@@ -1,17 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-07T23:27:51.357+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-10T09:21:38.311+02:00"}
 ---
 
 
 # StdInt
 
-The `StdInt` module contains definitions for operations and functions relating to integer type. 
+The `StdInt` module contains implementations of functions which interact with integer type. 
 
-When imported, this allows for:
+When imported, it allows for:
 - integer arithmetic,
 - comparison between integers,
 - usage of bitwise operations,
-- property testing, and
+- usage of predicate functions, and
 - conversion to and from integer type.
 
 Visit [StdInt](https://cloogle.org/src/#base-stdenv/StdInt;icl;line=1) on Cloogle for source code of this module.
@@ -447,7 +447,6 @@ bitnot   5   //  -6
 
 **Signature**
 
-
 ```Clean
 // Language: Clean
 
@@ -640,9 +639,7 @@ lcm (-3) (-2)  // 6
 
 ---
 
-## Property Functions
-
-Tests properties of an integer.
+## Predicate Functions
 
 ### `isEven`
 
@@ -698,13 +695,15 @@ isOdd -2  // True
 
 ## Conversions To Integer Type
 
-Explicitly converts values of other types to integer type.
+Explicitly converts other types to integer type.
 
 ### From Real Number Type
 
 **Signature**
 
 ```Clean
+// Language: Clean
+
 toInt :: Real -> Int
 toInt    a    => ...
 ```
@@ -760,7 +759,7 @@ toInt :: { #Char } -> Int
 toInt    a         => ...
 ```
 
-**Behavior**: attempts to parse `a` to an integer.
+**Behavior**: attempts to parse `a` as an integer.
 
 It returns zero if unsuccessful.
 
@@ -794,7 +793,7 @@ fromInt :: Real -> Int
 fromInt    a    => ...
 ```
 
-**Behavior**: converts `a` to a real number by setting its decimal place to zero.
+**Behavior**: returns a real number by setting its decimal places to zero.
 
 **Usage**
 
@@ -817,7 +816,7 @@ fromInt :: Int -> Char
 fromInt    a   => ...
 ```
 
-**Behavior**: converts `a` to a character of the same ASCII value.
+**Behavior**: returns an ASCII character whose value is equal to `a`.
 
 **Usage**
 
@@ -844,7 +843,7 @@ fromInt :: Int -> { #Char }
 fromInt    a   => ...
 ```
 
-**Behavior**: converts `a` to a string.
+**Behavior**: returns a string representation of `a`.
 
 **Usage**
 
