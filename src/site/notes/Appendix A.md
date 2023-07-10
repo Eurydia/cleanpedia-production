@@ -1,17 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/","created":"2023-06-20T18:37:36.387+02:00","updated":"2023-07-09T10:37:04.544+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/","created":"2023-06-20T18:37:36.387+02:00","updated":"2023-07-10T14:08:55.143+02:00"}
 ---
 
 
 # Appendix A: StdEnv
 
-This section is referred to by other parts of the reference to increase readability and clarity.
-It summarizes the content of Standard Environment.
+> [!note] This is a reference note.
+> This note serves as a list to other notes.
 
 The Standard Environment includes, but not limited to, the following modules.
 
-| Module                                                  | Description                                                       |
-| ------------------------------------------------------- | ----------------------------------------------------------------- |
+| Module                                         | Description                                                       |
+| ---------------------------------------------- | ----------------------------------------------------------------- |
 | [StdArray](Appendix%20A/stdarray.md)           | Operations and functions on arrays                                |
 | [[Appendix A/StdBool\|StdBool]]                | Logical operations                                                |
 | [[Appendix A/StdChar\|StdChar]]                | Operations and functions on characters                            |
