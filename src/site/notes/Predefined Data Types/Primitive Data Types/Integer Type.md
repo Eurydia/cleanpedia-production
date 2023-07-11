@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-10T22:33:11.265+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-11T10:37:37.035+02:00"}
 ---
 
 
@@ -46,7 +46,7 @@ x =  00  // decimal  0
 x =  015 // decimal  13
 ```
 
-And they can be constructed from hexadecimal notation by prefixing hexadecimal digits with `0x`.
+They can be constructed from hexadecimal notation by prefixing hexadecimal digits with `0x`.
 
 ```Clean
 // Language: Clean
@@ -64,20 +64,47 @@ Example 1:
 ```Clean
 // Language: Clean
 
-isUnitA :: Int -> Bool
-isUnitA    1   =  True
-isUnitA    _   =  False
-
-isUnitB :: Int -> Bool
-isUnitB    01  =  True
-isUnitB    _   =  False
-
-isUnitC :: Int -> Bool
-isUnitC    0x1 =  True
-isUnitC    _   =  False
+isUnit :: Int -> Bool
+isUnit    1   =  True
+isUnit    _   =  False
 ```
 
+The definition of `isUnit` has two alternative variants.
+
+One variant is obtained by using octal notation instead of decimal notation.
+
+```Clean
+// Language: Clean
+
+isUnit :: Int -> Bool
+isUnit    01  =  True
+isUnit    _   =  False
+```
+
+And another is obtained using hexadecimal notation.
+
+```Clean
+// Language: Clean
+
+isUnit :: Int -> Bool
+isUnit    0x1 =  True
+isUnit    _   =  False
+```
+
+The behavior of `isUnit` is unchanged, as each notation represents the same numerical value.
+
 Example 2:
+
+```Clean
+// Language: Clean
+
+add :: Int Int -> Int
+add    0   y   =  y
+add    x   0   =  x
+add    x   y   =  x + y
+```
+
+Since different notation can mix freely, the definition of `add` can be written in various ways.
 
 ```Clean
 // Language: Clean
