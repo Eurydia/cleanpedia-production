@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-10T22:34:08.371+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T10:37:09.149+02:00"}
 ---
 
 
@@ -57,29 +57,46 @@ The expression results in a compile-time error if a lowercase "e" is used.
 
 Example 1:
 
-The definitions of `isUnitA` and `isUnitB` are equivalent.
+```Clean
+// Language: Clean
+
+isUnit :: Real -> Bool
+isUnit    1.0  =  True
+isUnit    _    =  False
+```
+
+The definition of `isUnit` has an alternative variant.
+
+One variant is obtained by using scientific notation instead of decimal notation.
 
 ```Clean
 // Language: Clean
 
-isUnitA :: Real -> Bool
-isUnitA    1.0  =  True
-isUnitA    _    =  False
-
-isUnitB :: Real -> Bool
-isUnitB    1E1  =  True
-isUnitB    _    =  False
+isUnit :: Real -> Bool
+isUnit    1E1  =  True
+isUnit    _    =  False
 ```
+
+The behavior of `isUnit` is unchanged, as each notation represents the same numerical value.
 
 Example 2:
 
-Multiple notations can mix freely.
+```Clean
+// Language: Clean
+
+add :: Real Real -> Real
+add    0.0  y    =  y
+add    x    0.0  =  x
+add    x    y    =  x + y
+```
+
+Since different notation can mix freely, the definition of `add` can be written in various ways.
 
 ```Clean
 // Language: Clean
 
-add :: Real Real -> Int
+add :: Real Real -> Real
 add    0.0  y    =  y
-add    x    0E1  =  x
+add    x    1E0  =  x
 add    x    y    =  x + y
 ```
