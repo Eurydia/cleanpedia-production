@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-10T09:02:59.243+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-10T22:33:17.322+02:00"}
 ---
 
 
@@ -35,6 +35,8 @@ x =  '+'
 ```
 
 ## Using Character Literal as Pattern
+
+Example:
 
 ```Clean
 // Language: Clean
