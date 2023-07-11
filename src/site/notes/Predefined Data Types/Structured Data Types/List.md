@@ -1,15 +1,89 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/list/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-10T14:30:07.623+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/list/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T11:18:22.808+02:00"}
 ---
 
 
 # List
 
-**Type annotation**:
-`[Int]`,
-`[Char]`,
-`[T]`,
-et cetera.
+Lists can contain an infinite number of elements. 
+Elements of a list must be of the same type. 
+
+Lists are lazy by default, but they can be defined as:
+- head strict, 
+- spine strict, 
+- strict, 
+- head strict unboxed, and
+- strict unboxed. 
+
+Lazy, strict, and unboxed lists are considered different type.
+They have unique time and space properties.
+
+Because these lists are of different type, functions defined on one type of list cannot be applied to another. 
+However, overloaded functions can be introduced, which can be used on any type of list.
+
+For built-in functions on list, see [[Appendix A/StdList\|StdList]] module for additional information.
+
+See [[Appendix A/StdCharList\|StdCharList]] module for built-in functions on lists of characters.
+
+See [[Appendix A/StdOrdList\|StdOrdList]] module for built-in functions on sorting and ordering lists.
+
+## List Type Declaration
+
+The element type must be declared in addition to the list type.
+
+Lazy lists are explicitly declared with square brackets (`[ ... ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ Int ]
+x =  [ 1, 2, 3 ]
+```
+
+Head strict lists are explicitly declared by placing an exclamation mark after the opening square bracket (`[ ! ... ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ ! Int ]
+x =  [ ! 1, 2, 3 ]
+```
+
+Tail strict lists are explicitly declared by placing an exclamation mark before the closing square bracket (`[ ... ! ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ Int ! ]
+x =  [ 1, 2, 3 ! ]
+```
+
+Strict lists are explicitly declared by placing an exclamation mark after and before the square bracket (`[ ! ... ! ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ ! Int ! ]
+x =  [ ! 1, 2, 3 ! ]
+```
+
+Unboxed head strict lists are explicitly declared by placing a hash symbol after the opening square bracket (`[ # ... ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ # Int ]
+x =  [ # 1, 2, 3 ]
+```
+
+Unboxed strict lists are explicitly declared by placing a hash symbol and an exclamation mark after the opening square bracket (`[ #! ... ]`).
+
+```Clean
+// Language: Clean
+
+x :: [ #! Int ]
+x =  [ #! 1, 2, 3 ]
+```
 
 #### Constructing Lists
 
@@ -158,9 +232,9 @@ A list may contain an infinite number of elements, but elements must have the sa
 
 More information about built-in operations and functions on lists can be found on:
 
-- [Appendix A: StdCharList](Appendix%20A/stdcharlist.md),
-- [Appendix A: StdList](Appendix%20A/stdlist.md), and
-- [Appendix A: StdOrdList](Appendix%20A/stdordlist.md).
+- [Appendix A: StdCharList](Appendix%20A/StdCharList.md),
+- [Appendix A: StdList](Appendix%20A/StdList.md), and
+- [Appendix A: StdOrdList](Appendix%20A/StdOrdList.md).
 
 **List patterns**
 
