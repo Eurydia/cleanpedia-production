@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-10T09:01:37.787+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-10T22:33:11.265+02:00"}
 ---
 
 
@@ -59,7 +59,7 @@ x =  0xd  // decimal  13
 
 ## Using Integer Literal as Pattern
 
-The definitions of `isUnitA`, `isUnitB`, and `isUnitC` are equivalent.
+Example 1:
 
 ```Clean
 // Language: Clean
@@ -77,13 +77,13 @@ isUnitC    0x1 =  True
 isUnitC    _   =  False
 ```
 
-Multiple notations can mix freely.
+Example 2:
 
 ```Clean
 // Language: Clean
 
-sum :: Int Int -> Int
-sum    00  y   =  y
-sum    x   0x0 =  x
-sum    x   y   =  x + y
+add :: Int Int -> Int
+add    00  y   =  y
+add    x   0x0 =  x
+add    x   y   =  x + y
 ```
