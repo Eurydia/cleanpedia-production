@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-10T08:55:15.293+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-10T22:34:08.371+02:00"}
 ---
 
 
@@ -55,6 +55,8 @@ The expression results in a compile-time error if a lowercase "e" is used.
 
 ## Using Real Number Literal as Pattern
 
+Example 1:
+
 The definitions of `isUnitA` and `isUnitB` are equivalent.
 
 ```Clean
@@ -68,6 +70,8 @@ isUnitB :: Real -> Bool
 isUnitB    1E1  =  True
 isUnitB    _    =  False
 ```
+
+Example 2:
 
 Multiple notations can mix freely.
 
