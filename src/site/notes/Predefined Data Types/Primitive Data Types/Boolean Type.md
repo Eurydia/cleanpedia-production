@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-10T09:00:40.027+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-10T22:33:55.669+02:00"}
 ---
 
 
@@ -23,6 +23,7 @@ expr =  1 == 1
 ## Boolean Literals
 
 Boolean literals have two constructors.
+One for each Boolean value.
 
 ```Clean
 // Language: Clean
@@ -32,7 +33,19 @@ x =  True
 x =  False
 ```
 
-## Using Integer Literal as Pattern
+## Using Boolean Literal as Pattern
+
+Example 1:
+
+```Clean
+// Language: Clean
+
+negate :: Bool -> Bool
+negate    True =  False
+negate    _    =  True
+```
+
+Example 2:
 
 ```Clean
 // Language: Clean
