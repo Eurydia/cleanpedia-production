@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T14:16:45.970+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T15:15:07.327+02:00"}
 ---
 
 
@@ -144,7 +144,7 @@ y =  [ 'abc' ]
 
 List comprehensions provide an alternative way to implicitly construct a list, but they cannot be used as a pattern.
 
-They construct a list using an existing list.
+They construct a list from an existing one.
 
 ```Clean
 // Language: Clean
@@ -243,7 +243,7 @@ newList :: [ ( T, K ) ]
 newList =  [ ( elx, ely ) \\ elx <- lsx | predx elx , ely <- lsy | predy ely ]
 ```
 
-It is equivalent to an`if` block to each nested `for` loop.
+It is equivalent to an `if` block to each nested `for` loop.
 
 ```Python
 # Language: Python
@@ -258,16 +258,54 @@ for elx in lsx:
 		newList.append((elx, ely))
 ```
 
-If two generators are joined with ampersand, they will share a condition.
+If two generators are joined with ampersand, they can only share a condition.
 
 ```Clean
 // Langauge: Clean
 
 newList :: [ ( T, K ) ]
-newList =  [ ( elx, ely ) \\ elx <- lsx | predx elx & ely <- lsy | predy ely ]  // compile-time error
+newList =  [ ( elx, ely ) \\ elx <- lsx & ely <- lsy | pred ely ]
 ```
 
+It is worth noting that ampersand binds more tightly than comma when joining generators.
 
+```Clean
+// Langauge: Clean
+
+newList :: [ ( T, K, V ) ]
+newList =  [ ( elx, ely, elz ) \\ elx <- lsx & ely <- lsy , elz <- lsz ]
+```
+
+It is equivalent to zipping generators with a nested `for` loop.
+
+```Python
+# Language: Python
+
+newList: list[tuple[any, any, any]] = []
+for (elx, ely) in zip(lsx, lsy):
+	for elz in lsz:
+		newList.append((elx, ely, elz))
+```
+
+If ampersands and commas are swapped, the semantic meaning changes entirely.
+
+```Clean
+// Langauge: Clean
+
+newList :: [ ( T, K, V ) ]
+newList =  [ ( elx, ely, elz ) \\ elx <- lsx , ely <- lsy & elz <- lsz ]
+```
+
+It is equivalent to a `for` loop, then a zipped generator.
+
+```Python
+# Language: Python
+
+newList: list[tuple[any, any, any]] = []
+for elx in lsx:
+	for (ely, elz) in zip(lsy, lsz):
+		newList.append((elx, ely, elz))
+```
 
 ## Dot-Dot Expressions
 
@@ -332,99 +370,78 @@ When constructing a list using the fourth variant, if an element would go "out o
 
 ## Using List Literal as Pattern
 
-Lists can be specified as patterns as follow:
+Example 1:
 
-```
+Matching an exact number of elements.
+
+```Clean
 // Language: Clean
 
-getFst :: [T]       -> T
-getFst    [x, y, z] =  x
-
-getSnd :: [T]       -> T
-getSnd    [x, y, z] =  y
-
-getThd :: [T]       -> T
-getThd    [x, y, z] =  z
+isLenOne :: [ T ] -> Bool
+isLenOne    [ x ] =  True
+isLenOne    _     =  False
 ```
 
-The results of these function calls are as expected:
+The function `isLenOne` yields true if it is called with a list of exactly one element.
 
-```
+```Clean
 // Language: Clean
 
-getFst [1, 2, 3]  // 1
-getSnd [1, 2, 3]  // 2
-getThd [1, 2, 3]  // 3
+isLenThree :: [ T ]       -> Bool
+isLenThree    [ x, y, z ] =  True
+isLenThree    _           =  False
 ```
 
-However, they will result in a run-time error if it is invoked with a list which does not have exactly three elements.
+The function `isLenThree` yields true if it is called with a list of exactly three elements.
 
-```
+Example 2:
+
+Matching at least some elements with greedy matching.
+
+```Clean
 // Language: Clean
 
-getFst [1]          // NOT OK :(
-getSnd [1, 2]       // NOT OK :(
-getThd [4, 3, 2, 1] // NOT OK :(
+isLenGtOne :: [ T ]      -> Bool
+isLenGtOne    [ x : ls ] =  True
+isLenGtOne    _          =  False
 ```
 
-To remedy this issue, an addition element should be introduce.
+The function `isLenGtOne` yields true if it is called with a list with at least one element.
 
-```
+```Clean
 // Language: Clean
 
-getFstAny :: [T]     -> T
-getFstAny    [x : r] =  x
-
-getSndAny :: [T]        -> T
-getSndAny    [x, y : r] =  y
-
-getThdAny :: [T]           -> T
-getThdAny    [x, y, z : r] =  z
+isLenGtThree :: [ T ]            -> Bool
+isLenGtThree    [ x, y, z : ls ] =  True
+isLenGtThree    _                =  False
 ```
 
-The right-hand side of colon ($:$) matches with any number of elements, including zero.
-It is worth noting that $r$ is always a list.
+The function `isLenGtThree` yields true if it is called with a list with at least three elements.
 
-```
+The variable `ls` is always a list.
+
+Example 3:
+
+```Clean
 // Language: Clean
 
-getFstAny [1]           // x = 1
-                        // r = []
-
-getFstAny [1, 2]        // x = 1
-                        // r = [2]
-
-getFstAny [4, 3, 2, 1]  // x = 4
-                        // r = [3, 2, 1]
+isLenOne :: [ T ] -> Bool
+isLenOne    [ 1 ] =  True
+isLenOne    _     =  False
 ```
 
-However, the second function still requires the list to have at least two elements.
+The function `isLenOne` yields true if it is called with a list of exactly one element .
 
-```
+```Clean
 // Language: Clean
 
-getSndAny [1]           // NOT OK :(
-
-getSndAny [1, 2]        // x = 1
-                        // y = 2
-                        // r = []
-
-getSndAny [4, 3 ,2 ,1]  // x = 4
-                        // y = 3
-                        // r = [2, 1]
+isLenThree :: [ T ]       -> Bool
+isLenThree    [ 1, y, z ] =  True
+isLenThree    _           =  False
 ```
 
-Similarly, the third function requires a list with at least three elements.
+The function `isLenThree` yields true if it is called with a list of exactly three elements.
 
-```
-// Language: Clean
 
-getThdAny [1]           // NOT OK :(
+## Labelling List Pattern
 
-getThdAny [1, 2]        // NOT OK :(
-
-getThdAny [4, 3, 2, 1]  // x = 4
-                        // y = 3
-                        // z = 2
-                        // r = [1]
-```
