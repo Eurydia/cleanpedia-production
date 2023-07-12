@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T15:15:07.327+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T00:00:39.365+02:00"}
 ---
 
 
@@ -8,24 +8,22 @@
 Lists can contain an infinite number of elements. 
 Elements of a list must be of the same type. 
 
-Lists are lazy by default, but they can be defined as:
+Lists are lazy by default, but other variants are:
 - head strict, 
 - spine strict, 
 - strict, 
 - head strict unboxed, and
 - strict unboxed. 
 
-Lazy, strict, and unboxed lists are considered different type.
-They have unique time and space properties.
-
-Because these lists are of different type, functions defined on one type of list cannot be applied to another. 
+These variants are considered different type with unique time and space properties.
+Functions defined on one type of list cannot be applied to another. 
 However, overloaded functions can be introduced, which can be used on any type of list.
 
 For built-in functions on list, see [[Appendix A/StdList\|StdList]], [[Appendix A/StdCharList\|StdCharList]], and [[Appendix A/StdOrdList\|StdOrdList]] module for additional information.
 
 ## List Type Declaration
 
-The element type must be declared in addition to the list type.
+In addition to the list type, the element type must be declared by placing it inside or after the list type.
 
 Lazy lists are explicitly declared with square brackets (`[ ... ]`).
 
@@ -34,33 +32,45 @@ Lazy lists are explicitly declared with square brackets (`[ ... ]`).
 
 x :: [ Int ]
 x =  [ 1, 2, 3 ]
+
+y :: [ ] Int
+y =  [ 1, 2, 3 ]
 ```
 
-Head strict lists are explicitly declared by placing an exclamation mark after the opening square bracket (`[ ! ... ]`).
+Head strict lists are explicitly declared by placing an exclamation mark after the opening square bracket (`[! ... ]`).
 
 ```Clean
 // Language: Clean
 
-x :: [ ! Int ]
-x =  [ ! 1, 2, 3 ]
+x :: [! Int ]
+x =  [! 1, 2, 3 ]
+
+y :: [! ] Int 
+y =  [! 1, 2, 3 ]
 ```
 
-Tail strict lists are explicitly declared by placing an exclamation mark before the closing square bracket (`[ ... ! ]`).
+Tail strict lists are explicitly declared by placing an exclamation mark before the closing square bracket (`[ ... !]`).
 
 ```Clean
 // Language: Clean
 
-x :: [ Int ! ]
-x =  [ 1, 2, 3 ! ]
+x :: [ Int !] 
+x =  [ 1, 2, 3 !]
+
+y :: [ !] Int
+y =  [ 1, 2, 3 !]
 ```
 
-Strict lists are explicitly declared by placing an exclamation mark after and before the square bracket (`[ ! ... ! ]`).
+Strict lists are explicitly declared by placing an exclamation mark after and before the square bracket (`[! ... !]`).
 
 ```Clean
 // Language: Clean
 
-x :: [ ! Int ! ]
-x =  [ ! 1, 2, 3 ! ]
+x :: [! Int !]
+x =  [! 1, 2, 3 !]
+
+y :: [! !] Int
+y =  [! 1, 2, 3 !]
 ```
 
 Unboxed head strict lists are explicitly declared by placing a hash symbol after the opening square bracket (`[ # ... ]`).
@@ -70,6 +80,9 @@ Unboxed head strict lists are explicitly declared by placing a hash symbol after
 
 x :: [ # Int ]
 x =  [ # 1, 2, 3 ]
+
+y :: [ # ] Int
+y =  [ # 1, 2, 3 ]
 ```
 
 Unboxed strict lists are explicitly declared by placing a hash symbol and an exclamation mark after the opening square bracket (`[ #! ... ]`).
@@ -79,7 +92,11 @@ Unboxed strict lists are explicitly declared by placing a hash symbol and an exc
 
 x :: [ #! Int ]
 x =  [ #! 1, 2, 3 ]
+
+y :: [ #! ] Int 
+y =  [ #! 1, 2, 3 ]
 ```
+
 
 ## List Literals
 
@@ -123,9 +140,6 @@ Multiple colons can be used to construct a list.
 
 x :: [ Int ]
 x =  [ 1 : [ 2 : [ 3 : [] ] ] ]
-
-y :: [ Int ]
-y =  [ 1 : 2 : 3 ]
 ```
 
 A special notation for constructing a list of characters is also provided.
@@ -138,6 +152,9 @@ x =  ['a', 'b', 'c']
 
 y :: [ Char ] 
 y =  [ 'abc' ]
+
+z :: [ Char ]
+z =  [ 'ab', 'c' ]
 ```
 
 ## List Comprehensions
@@ -370,16 +387,14 @@ When constructing a list using the fourth variant, if an element would go "out o
 
 ## Using List Literal as Pattern
 
-Example 1:
-
-Matching an exact number of elements.
+Example A:
 
 ```Clean
 // Language: Clean
 
-isLenOne :: [ T ] -> Bool
-isLenOne    [ x ] =  True
-isLenOne    _     =  False
+exampleA :: [ T ] -> Bool
+exampleA    [ x ] =  True
+exampleA    _     =  False
 ```
 
 The function `isLenOne` yields true if it is called with a list of exactly one element.
