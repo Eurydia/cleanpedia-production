@@ -1,13 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-10T09:21:38.311+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-12T11:49:54.057+02:00"}
 ---
 
 
 # StdInt
 
-The `StdInt` module contains implementations of functions which interact with integer type. 
+The `StdInt` module contains implementations for integer functions.
 
 When imported, it allows for:
+
 - integer arithmetic,
 - comparison between integers,
 - usage of bitwise operations,
@@ -29,7 +30,9 @@ zero ::  Int
 zero :== 0
 ```
 
-**Definition**: represents identity element of integer addition.
+**Definition**
+
+It represents the identity element of integer addition.
 
 ### One Unit
 
@@ -42,7 +45,9 @@ one ::  Int
 one :== 1
 ```
 
-**Definition**: represents identity element of integer multiplication.
+**Definition**
+
+It represents the identity element of integer multiplication.
 
 ---
 
@@ -59,13 +64,15 @@ one :== 1
 ~    a   => ...
 ```
 
-**Behavior**: inverts sign `a`.
+**Behavior**
+
+It inverts the sign `a`.
 
 **Usage**
 
 ```Clean
 // Language: Clean
- 
+
 ~  0   //  0
 ~  1   // -1
 ~(-1)  //  1
@@ -73,16 +80,18 @@ one :== 1
 
 ### Addition
 
-**Signature** 
+**Signature**
 
 ```
 // Language: Clean
- 
+
 (+) infixl 6 :: Int Int -> Int
 (+)             a   b   => ...
 ```
 
-**Behavior**: adds `a` and `b`.
+**Behavior**
+
+It adds `a` and `b`.
 
 **Usage**
 
@@ -101,12 +110,14 @@ one :== 1
 
 ```Clean
 // Language: Clean
- 
+
 (-) infixl 6 :: Int Int -> Int
 (-)             a   b   => ...
 ```
 
-**Behavior**: subtracts `b` from `a`.
+**Behavior**
+
+It subtracts `b` from `a`.
 
 **Usage**
 
@@ -125,12 +136,14 @@ one :== 1
 
 ```Clean
 // Language: Clean
- 
+
 (*) infixl 7 :: Int Int -> Int
 (*)             a   b   => ...
 ```
 
-**Behavior**: multiplies `a` and `b`.
+**Behavior**
+
+It multiplies `a` and `b`.
 
 **Usage**
 
@@ -154,8 +167,9 @@ one :== 1
 (/)             a   b   => ...
 ```
 
-**Behavior**: divides `a` by `b`.
+**Behavior**
 
+It divides `a` by `b`.
 An expression results in a silent crash if `b` is zero.
 
 **Usage**
@@ -192,7 +206,9 @@ and
 
 For integer type, both `rem` and `mod` perform modulo division.
 
-**Behavior**: divides `a` by `b`, and returns the reminder.
+**Behavior**
+
+It divides `a` by `b`, and returns the reminder.
 
 **Usage**
 
@@ -216,8 +232,9 @@ For integer type, both `rem` and `mod` perform modulo division.
 (^)             a   b   => ...
 ```
 
-**Behavior**: raises `a` to the power of `b`.
+**Behavior**
 
+It raises `a` to the power of `b`.
 An expression results in a run-time error if `b` is negative.
 
 ```markdown
@@ -250,7 +267,9 @@ An expression results in a run-time error if `b` is negative.
 (==)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is equal to `b`.
+**Behavior**
+
+It returns true if `a` is equal to `b`.
 
 **Usage**
 
@@ -275,7 +294,9 @@ An expression results in a run-time error if `b` is negative.
 (<>)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is not equal to `b`.
+**Behavior**
+
+It returns true if `a` is not equal to `b`.
 
 **Usage**
 
@@ -300,7 +321,9 @@ An expression results in a run-time error if `b` is negative.
 (<)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is strictly less than `b`.
+**Behavior**
+
+It returns true if `a` is strictly less than `b`.
 
 **Usage**
 
@@ -325,7 +348,9 @@ An expression results in a run-time error if `b` is negative.
 (<=)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is less than or equal to `b`.
+**Behavior**
+
+It returns true if `a` is less than or equal to `b`.
 
 **Usage**
 
@@ -350,7 +375,9 @@ An expression results in a run-time error if `b` is negative.
 (>)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is strictly greater than `b`.
+**Behavior**
+
+It returns true if `a` is strictly greater than `b`.
 
 **Usage**
 
@@ -375,7 +402,9 @@ An expression results in a run-time error if `b` is negative.
 (>=)            a   b   => ...
 ```
 
-**Behavior**: returns true if `a` is greater than or equal to `b`.
+**Behavior**
+
+It returns true if `a` is greater than or equal to `b`.
 
 **Usage**
 
@@ -393,7 +422,7 @@ An expression results in a run-time error if `b` is negative.
 
 ## Bitwise Operations and Functions
 
-Interacts with integer type through binary representation.
+They interact with integer type through binary representation.
 
 ### Bitwise NEGATE
 
@@ -406,7 +435,9 @@ bitnot :: Int -> Int
 bitnot    a   => ...
 ```
 
-**Behavior**: returns bitwise-two complement of `a`.
+**Behavior**
+
+It returns bitwise-two complement of `a`.
 
 **Usage**
 
@@ -430,7 +461,9 @@ bitnot   5   //  -6
 (bitor)             a   b   => ...
 ```
 
-**Behavior**: returns bitwise OR of `a` and `b`.
+**Behavior**
+
+It returns bitwise OR of `a` and `b`.
 
 **Usage**
 
@@ -454,7 +487,9 @@ bitnot   5   //  -6
 (bitand)             a   b   => ...
 ```
 
-**Behavior**: returns bitwise AND of `a` and `b`.
+**Behavior**
+
+It returns bitwise AND of `a` and `b`.
 
 **Usage**
 
@@ -478,7 +513,9 @@ bitnot   5   //  -6
 (bitxor)             a   b   => ...
 ```
 
-**Behavior**: returns bitwise XOR of `a` and `b`.
+**Behavior**
+
+It returns bitwise XOR of `a` and `b`.
 
 **Usage**
 
@@ -502,7 +539,9 @@ bitnot   5   //  -6
 (<<)            a   b   => ...
 ```
 
-**Behavior**: shifts `a` to the left by `b` bits.
+**Behavior**
+
+It shifts `a` to the left by `b` bits.
 
 **Usage**
 
@@ -526,7 +565,9 @@ bitnot   5   //  -6
 (>>)            a   b   => ...
 ```
 
-**Behavior**: shifts `a` to the right by `b` bits.
+**Behavior**
+
+It shifts `a` to the right by `b` bits.
 
 **Usage**
 
@@ -554,7 +595,9 @@ sign :: Int -> Int
 sign    a   => ...
 ```
 
-**Behavior**: returns sign of `a`.
+**Behavior**
+
+It returns the sign of `a`.
 
 **Usage**
 
@@ -577,7 +620,9 @@ abs :: Int -> Int
 abs    a   => ...
 ```
 
-**Behavior**: returns absolute value of `a`.
+**Behavior**
+
+It returns the absolute value of `a`.
 
 **Usage**
 
@@ -600,7 +645,9 @@ gcd :: Int Int -> Int
 gcd    a   b   => ...
 ```
 
-**Behavior**: returns greatest common divisor of `a` and `b`.
+**Behavior**
+
+It returns the greatest common divisor of `a` and `b`.
 
 **Usage**
 
@@ -624,7 +671,9 @@ lcm :: Int Int -> Int
 lcm    a   b   => ...
 ```
 
-**Behavior**: returns least common multiple of `a` and `b`.
+**Behavior**
+
+It returns the least common multiple of `a` and `b`.
 
 **Usage**
 
@@ -652,7 +701,9 @@ isEven :: Int -> Bool
 isEven    a   => ...
 ```
 
-**Behavior**: returns true if `a` is an even integer.
+**Behavior**
+
+It returns true if `a` is an even integer.
 
 **Usage**
 
@@ -677,7 +728,9 @@ isOdd :: Int -> Bool
 isOdd    a   => ...
 ```
 
-**Behavior**: returns true if `a` is an odd integer.
+**Behavior**
+
+It returns true if `a` is an odd integer.
 
 **Usage**
 
@@ -695,7 +748,7 @@ isOdd -2  // True
 
 ## Conversions To Integer Type
 
-Explicitly converts other types to integer type.
+They explicitly convert other types to integer type.
 
 ### From Real Number Type
 
@@ -708,7 +761,9 @@ toInt :: Real -> Int
 toInt    a    => ...
 ```
 
-**Behavior**: rounds `a` to its nearest integer.
+**Behavior**
+
+It rounds `a` to its nearest integer.
 
 **Usage**
 
@@ -733,7 +788,9 @@ toInt :: Char -> Int
 toInt    a    => ...
 ```
 
-**Behavior**: returns ASCII value of `a`.
+**Behavior**
+
+It returns ASCII code of `a`.
 
 **Usage**
 
@@ -759,16 +816,17 @@ toInt :: { #Char } -> Int
 toInt    a         => ...
 ```
 
-**Behavior**: attempts to parse `a` as an integer.
+**Behavior**
 
-It returns zero if unsuccessful.
+It attempts to parse `a` as an integer.
+If it is unsuccessful, it returns zero.
 
 **Usage**
 
 ```Clean
 // Language: Clean
 
-toInt "1.0"   //  0	
+toInt "1.0"   //  0
 toInt "1"     //  1
 toInt "0"     //  0
 toInt "-1"    // -1
@@ -779,7 +837,7 @@ toInt "-1.0"  //  0
 
 ## Conversions From Integer Type
 
-Explicitly converts integer type to other types.
+They explicitly convert integer type to other types.
 The desired type must be unambiguous.
 
 ### To Real Number Type
@@ -793,7 +851,9 @@ fromInt :: Real -> Int
 fromInt    a    => ...
 ```
 
-**Behavior**: returns a real number by setting its decimal places to zero.
+**Behavior**
+
+It sets the decimal places of `a` to 0.
 
 **Usage**
 
@@ -816,7 +876,9 @@ fromInt :: Int -> Char
 fromInt    a   => ...
 ```
 
-**Behavior**: returns an ASCII character whose value is equal to `a`.
+**Behavior**
+
+It returns a character whose ASCII code is `a`.
 
 **Usage**
 
@@ -843,7 +905,9 @@ fromInt :: Int -> { #Char }
 fromInt    a   => ...
 ```
 
-**Behavior**: returns a string representation of `a`.
+**Behavior**
+
+It returns a string representation of `a`.
 
 **Usage**
 
