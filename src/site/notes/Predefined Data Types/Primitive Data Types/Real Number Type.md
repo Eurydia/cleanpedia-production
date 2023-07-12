@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-12T11:14:56.271+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-12T21:43:54.437+02:00"}
 ---
 
 
@@ -21,8 +21,6 @@ expr =  1.0 + 1.0
 ```
 
 ## Real Number Literals
-
-Real number literals can be constructed from two notations.
 
 They can be constructed from decimal notation.
 
@@ -111,7 +109,7 @@ One variant is obtained by using scientific notation instead of decimal notation
 
 exampleB :: Real Real -> Real
 exampleB    x    0E1  =  x
-exampleB    0E1  y    =  y
+exampleB    1E1  y    =  y
 exampleB    x    y    =  x + y
 ```
 
@@ -122,6 +120,6 @@ A variant can be obtained by mixing decimal notation and scientific notation.
 
 exampleB :: Real Real -> Real
 exampleB    x    0.0  =  x
-exampleB    0E1  y    =  y
+exampleB    1E1  y    =  y
 exampleB    x    y    =  x + y
 ```
