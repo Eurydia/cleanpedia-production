@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T11:14:04.115+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T21:44:25.987+02:00"}
 ---
 
 
@@ -21,8 +21,6 @@ expr =  1 + 1
 ```
 
 ## Integer Literals
-
-Integer literals can be constructed from three notations.
 
 They can be constructed from decimal notation.
 
