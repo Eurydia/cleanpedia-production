@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-11T10:37:09.149+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-12T11:14:56.271+02:00"}
 ---
 
 
@@ -44,8 +44,8 @@ And they can be constructed from scientific notation.
  1.3E-2  //  0.13
 ```
 
-In scientific notations, only uppercase "E" is allowed.
-The expression results in a compile-time error if a lowercase "e" is used.
+Only uppercase "E" is allowed in scientific notations.
+The expression results in a compile-time error if lower case "e" is used.
 
 ```Clean
 // Language: Clean
@@ -55,17 +55,28 @@ The expression results in a compile-time error if a lowercase "e" is used.
 
 ## Using Real Number Literal as Pattern
 
-Example 1:
+Example A:
 
 ```Clean
 // Language: Clean
 
-isUnit :: Real -> Bool
-isUnit    1.0  =  True
-isUnit    _    =  False
+exampleA :: Real -> Bool
+exampleA    1.0  =  True
+exampleA    _    =  False
 ```
 
-The definition of `isUnit` has an alternative variant.
+The function `exampleA` returns `True` when it is called with 1.
+It returns `False` when it is called with other real numbers.
+
+```Clean
+// Language: Clean
+
+exampleA 1.0  // True
+exampleA 1E0  // True
+exampleA 1E1  // True
+```
+
+From the example, the function `exampleA` has many equivalent variants.
 
 One variant is obtained by using scientific notation instead of decimal notation.
 
@@ -77,26 +88,40 @@ isUnit    1E1  =  True
 isUnit    _    =  False
 ```
 
-The behavior of `isUnit` is unchanged, as each notation represents the same numerical value.
-
-Example 2:
+Example B:
 
 ```Clean
 // Language: Clean
 
-add :: Real Real -> Real
-add    0.0  y    =  y
-add    x    0.0  =  x
-add    x    y    =  x + y
+exampleB :: Real Real -> Real
+exampleB    x    0.0  =  x
+exampleB    0.0  y    =  y
+exampleB    x    y    =  x + y
 ```
 
-Since different notation can mix freely, the definition of `add` can be written in various ways.
+The function `exampleB` performs real number addition.
+If one of its argument is 0, it returns the other argument.
+
+It has many equivalent variants.
+
+One variant is obtained by using scientific notation instead of decimal notation.
 
 ```Clean
 // Language: Clean
 
-add :: Real Real -> Real
-add    0.0  y    =  y
-add    x    1E0  =  x
-add    x    y    =  x + y
+exampleB :: Real Real -> Real
+exampleB    x    0E1  =  x
+exampleB    0E1  y    =  y
+exampleB    x    y    =  x + y
+```
+
+A variant can be obtained by mixing decimal notation and scientific notation.
+
+```Clean
+// Language: Clean
+
+exampleB :: Real Real -> Real
+exampleB    x    0.0  =  x
+exampleB    0E1  y    =  y
+exampleB    x    y    =  x + y
 ```
