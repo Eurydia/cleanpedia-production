@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-10T09:09:54.193+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-12T11:34:39.525+02:00"}
 ---
 
 
@@ -26,7 +26,9 @@ Visit [StdBool](https://cloogle.org/src/#base-stdenv/StdBool;icl;line=1) on Cloo
 (==)            a    b    => ...
 ```
 
-**Behavior**: returns true if `a` and `b` have the same logical value.
+**Behavior**
+
+It returns true if `a` and `b` have the same logical value.
 
 **Usage**
 
@@ -50,7 +52,9 @@ False == False  // True
 (||)             a    b    => ...
 ```
 
-**Behavior**: returns true if  `a` or `b` is true.
+**Behavior**
+
+It returns true if  `a` or `b` is true.
 
 **Usage**
 
@@ -74,7 +78,9 @@ False || False  // False
 (&&)             a    b    => ...
 ```
 
-**Behavior**: returns true if `a`and `b` are true.
+**Behavior**
+
+It returns true if `a`and `b` are true.
 
 **Usage**
 
@@ -102,7 +108,9 @@ not :: Bool -> Bool
 not    a    => ...
 ```
 
-**Behavior**: negates the logical value of `a`.
+**Behavior**
+
+It negates the logical value of `a`.
 
 **Usage**
 
@@ -118,7 +126,7 @@ not (not True)  // True
 
 ## Conversions From Boolean Type
 
-Explicitly converts Boolean type to other types.
+They explicitly convert Boolean type to other types.
 The desired type must be unambiguous.
 
 ### To String type
@@ -128,18 +136,20 @@ The desired type must be unambiguous.
 ```Clean
 // Language: Clean
 
-fromBool :: Bool -> { #Char }
+fromBool :: Bool -> { # Char }
 fromBool    a    => ...
 ```
 
-**Behavior**: returns a string representation of `a`.
+**Behavior**
+
+It returns a string representation of `a`.
 
 **Usage**
 
 ```Clean
 // Language: Clean
 
-expr :: { #Char }
+expr :: { # Char }
 expr =  fromBool True   // "True"
 expr =  fromBool False  // "False"
 ```
