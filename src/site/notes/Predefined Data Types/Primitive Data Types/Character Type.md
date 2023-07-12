@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T10:44:52.840+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T21:44:18.378+02:00"}
 ---
 
 
@@ -22,7 +22,7 @@ expr =  'a'
 
 ## Character Literals
 
-Character literals are constructed by placing a character inside a pair of single quotation marks (`'...'`).
+They are constructed by placing a character inside a pair of single quotation marks (`'...'`).
 
 ```Clean
 // Language: Clean
