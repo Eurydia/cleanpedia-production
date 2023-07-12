@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-12T11:16:45.641+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-12T21:44:09.065+02:00"}
 ---
 
 
@@ -22,7 +22,7 @@ expr =  1 == 1
 
 ## Boolean Literals
 
-Boolean literals have two constructors.
+They have two constructors.
 One for each logical value.
 
 ```Clean
