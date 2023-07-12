@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/","created":"2023-07-03T09:28:35.191+02:00","updated":"2023-07-11T11:19:21.142+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/","created":"2023-07-03T09:28:35.191+02:00","updated":"2023-07-12T21:28:36.062+02:00"}
 ---
 
 
@@ -8,16 +8,6 @@
 Predefined data types are introduced for reasons of efficiency and convenience.
 They serve as syntactic sugar to algebraic types.
 
-For additional clarity, predefined data types are categorized into two groups.
-
-Predefined primitive data types include:
-- [[Predefined Data Types/Primitive Data Types/Integer Type\|Integer Type]],
-- [[Predefined Data Types/Primitive Data Types/Real Number Type\|Real Number Type]],
-- [[Predefined Data Types/Primitive Data Types/Character Type\|Character Type]], and
-- [[Predefined Data Types/Primitive Data Types/Boolean Type\|Boolean Type]]
-
-Predefined structured data types are:
-- [[Predefined Data Types/Structured Data Types/Array\|Array]],
-- [[Predefined Data Types/Structured Data Types/Arrow Type\|Arrow Type]],
-- [[Predefined Data Types/Structured Data Types/Lists\|Lists]], and
-- [[Predefined Data Types/Structured Data Types/Tuple\|Tuple]].
+For additional clarity, predefined data types include:
+- [[Predefined Data Types/Primitive Data Types\|Primitive Data Types]], and
+- [[Predefined Data Types/Structured Data Types\|Structured Data Types]]
