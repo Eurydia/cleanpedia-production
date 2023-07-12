@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-11T12:12:55.555+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-12T11:16:45.641+02:00"}
 ---
 
 
@@ -23,7 +23,7 @@ expr =  1 == 1
 ## Boolean Literals
 
 Boolean literals have two constructors.
-One for each Boolean value.
+One for each logical value.
 
 ```Clean
 // Language: Clean
@@ -35,22 +35,43 @@ x =  False
 
 ## Using Boolean Literal as Pattern
 
-Example 1:
+Example A:
 
 ```Clean
 // Language: Clean
 
-negate :: Bool -> Bool
-negate    True =  False
-negate    _    =  True
+exampleA :: Bool -> Bool
+exampleA    True =  False
+exampleA    _    =  True
 ```
 
-Example 2:
+The function `exampleA` returns `True` when it is called with `False` and vice versa.
 
 ```Clean
 // Language: Clean
 
-implies :: Bool Bool  -> Bool
-implies    True False =  False
-implies    _    _     =  True
+exampleA True   // False
+exampleA False  //True
+```
+
+Example B:
+
+```Clean
+// Language: Clean
+
+exampleB :: Bool Bool  -> Bool
+exampleB    True True  =  False
+exampleB    _    _     =  True
+```
+
+The function `exampelB` returns `True` if both of its argument are `True`.
+Otherwise, it returns `False`.
+
+```Clean
+// Language: Clean
+
+exampleB True  True   // True
+exampleB True  False  // False
+exampleB False True   // False
+exampleB False False  // False
 ```
