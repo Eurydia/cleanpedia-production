@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T12:14:10.918+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T12:14:18.693+02:00"}
 ---
 
 
@@ -225,7 +225,7 @@ newList :: [ ( T, K, V ) ]
 newList =  [ ( elx, ely, elz ) \\ elx <- lsx & ely <- lsy , elz <- lsz ]
 ```
 
-> [!example] Python equivalent
+> [!example]- Python equivalent
 > ```Python
 > # Language: Python
 > 
