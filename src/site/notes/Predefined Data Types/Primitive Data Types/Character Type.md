@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T21:44:18.378+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-13T11:33:57.093+02:00"}
 ---
 
 
@@ -46,17 +46,8 @@ exampleA    'G'  =  True
 exampleA    _    =  False
 ```
 
-The function `exampleA` returns `True` when it is called with upper case 'G'.
-
-It returns `False` when it is called with other characters.
-
-```Clean
-// Language: Clean
-
-exampleA 'G'  // True
-exampleA 'g'  // False
-exampleA 'a'  // False
-```
+The `exampleA` function returns `True` when it is called with upper case 'G'.
+Otherwise, it returns `False`.
 
 Example B:
 
@@ -69,17 +60,8 @@ exampleB    'g'  =  True
 exampleB    _    =  False
 ```
 
-The function `exampleB` returns `True` when it is called with lower case or upper case 'G'.
-
-It returns `False` when it is called with other characters.
-
-```Clean
-// Language: Clean
-
-exampleB 'G'  // True
-exampleB 'g'  // True
-exampleB 'a'  // False
-```
+The `exampleB` function returns `True` when it is called with lower case or upper case 'G'.
+Otherwise, it returns `False`.
 
 Example C:
 
@@ -91,17 +73,8 @@ exampleC    'G'  'G'  =  True
 exampleC    _    _    =  False
 ```
 
-The function `exampleC` returns `True` when it is called with two upper case 'G'.
-
-It returns `False` when it is called with other combination of characters.
-
-```Clean
-// Language: Clean
-
-exampleC 'G' 'G'  // True
-exampleC 'g' 'G'  // False
-exampleC 'a' 'b'  // False
-```
+The `exampleC` function returns `True` when it is called with two upper case 'G'.
+Otherwise, it returns `False`.
 
 Example D:
 
@@ -116,14 +89,5 @@ exampleD    'g'  'g'  =  True
 exampleD    _    _    =  False
 ```
 
-The function `exampleD` returns `True` when both of its arguments are 'G'.
-
-It returns `False` when it is called with other combination of characters.
-
-```Clean
-// Language: Clean
-
-exampleC 'G' 'G'  // True
-exampleC 'g' 'G'  // True
-exampleC 'a' 'b'  // False
-```
+The `exampleD` function returns `True` when both of its arguments are 'G'.
+Otherwise, it returns `False`.
