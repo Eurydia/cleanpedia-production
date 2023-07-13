@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T12:14:18.693+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/lists/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T22:30:13.795+02:00"}
 ---
 
 
@@ -95,164 +95,9 @@ z =  [ 'ab', 'c' ]
 
 ## List Comprehensions
 
-List comprehensions provide an alternative way to implicitly construct a list, but they cannot be used as a pattern.
+All type of lists can be constructed using list comprehension.
 
-They construct a list from an existing one.
-
-```Clean
-// Language: Clean
-
-newList :: [ T ]
-newList =  [ el \\ el <- ls ]
-```
-
-They can construct a list from an existing array, but a different arrow must be used.
-
-```Clean
-// Language: Clean
-
-newList :: [ T ]
-newList =  [ el \\ el <-: arr ]
-```
-
-> [!example]- Python equivalent
-> 
-> ```Python
-> # Language: Python
-> 
-> newList: list[any] = []
-> for el in ls:
-> 	newList.append(el)
-> ```
-
-A comma (`,`) is used to join generators.
-The right-most generator is the fastest.
-
-```Clean
-// Language: Clean
-
-newList :: [ ( T, K ) ]
-newlist =  [ ( elx, ely ) \\ elx <- lsx , ely <- lsy ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[tuple[any, any]] = []
-> for elx in lsx:
-> 	for ely in lsy:
-> 		newList.append((elx, ely))
-> ```
-
-An ampersand (`&`) is used to zip generators.
-Iteration stops as soon as one generator runs out of element.
-
-```Clean
-// Language: Clean
-
-newList :: [ ( T, K ) ]
-newList =  [ ( elx, ely ) \\ elx <- lsx & ely <- lsy ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[tuple[any, any]] = []
-> for elx, ely in zip(lsx, lsy):
-> 	newList.append((elx, ely))
-> ```
-
-A condition can be introduced after each generator.
-
-```Clean
-// Langauge: Clean
-
-newList :: [ T ]
-newList =  [ elx \\ elx <- lsx | pred elx ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[any] = []
-> for elx in lsx:
-> 	if not pred(elx):
-> 		continue
-> 	newList.append(elx)
-> ```
-
-If two generators are joined with comma, each generator can have its own condition.
-
-```Clean
-// Langauge: Clean
-
-newList :: [ ( T, K ) ]
-newList =  [ ( elx, ely ) \\ elx <- lsx | predx elx , ely <- lsy | predy ely ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[tuple[any, any]] = []
-> for elx in lsx:
-> 	if not predx(elx):
-> 		continue
-> 	for ely in lsy:
-> 		if not predy(ely):
-> 			continue
-> 		newList.append((elx, ely))
-> ```
-
-If two generators are joined with ampersand, they can only share a condition.
-
-```Clean
-// Langauge: Clean
-
-newList :: [ ( T, K ) ]
-newList =  [ ( elx, ely ) \\ elx <- lsx & ely <- lsy | pred ely ]
-```
-
-It is worth noting that ampersand binds more tightly than comma when joining generators.
-
-```Clean
-// Langauge: Clean
-
-newList :: [ ( T, K, V ) ]
-newList =  [ ( elx, ely, elz ) \\ elx <- lsx & ely <- lsy , elz <- lsz ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[tuple[any, any, any]] = []
-> for (elx, ely) in zip(lsx, lsy):
-> 	for elz in lsz:
-> 		newList.append((elx, ely, elz))
-> ```
-
-If ampersands and commas are swapped, the semantic meaning changes.
-
-```Clean
-// Langauge: Clean
-
-newList :: [ ( T, K, V ) ]
-newList =  [ ( elx, ely, elz ) \\ elx <- lsx , ely <- lsy & elz <- lsz ]
-```
-
-> [!example]- Python equivalent
-> ```Python
-> # Language: Python
-> 
-> newList: list[tuple[any, any, any]] = []
-> for elx in lsx:
-> 	for (ely, elz) in zip(lsy, lsz):
-> 		newList.append((elx, ely, elz))
-> ```
+See [[Predefined Data Types/Structured Data Types/Comprehensions\|Comprehensions]] for additional information.
 
 ## Dot-Dot Expressions
 
@@ -407,7 +252,6 @@ The function `exampleF` returns true if it is called with a list of exactly thre
 The first element of the list must be 1.
 
 ## Labelling List Pattern
-
 
 Lists are lazy by default, but other variants are:
 - head strict, 
