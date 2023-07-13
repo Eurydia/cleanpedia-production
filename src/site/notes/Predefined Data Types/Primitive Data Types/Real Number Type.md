@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-12T21:43:54.437+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-13T11:42:43.157+02:00"}
 ---
 
 
@@ -63,18 +63,10 @@ exampleA    1.0  =  True
 exampleA    _    =  False
 ```
 
-The function `exampleA` returns `True` when it is called with 1.
-It returns `False` when it is called with other real numbers.
+The `exampleA` function returns `True` when it is called with 1.
+Otherwise, it returns `False`.
 
-```Clean
-// Language: Clean
-
-exampleA 1.0  // True
-exampleA 1E0  // True
-exampleA 1E1  // True
-```
-
-From the example, the function `exampleA` has many equivalent variants.
+It has many equivalent variants.
 
 One variant is obtained by using scientific notation instead of decimal notation.
 
@@ -97,7 +89,7 @@ exampleB    0.0  y    =  y
 exampleB    x    y    =  x + y
 ```
 
-The function `exampleB` performs real number addition.
+The `exampleB` function performs real number addition.
 If one of its argument is 0, it returns the other argument.
 
 It has many equivalent variants.
@@ -108,7 +100,7 @@ One variant is obtained by using scientific notation instead of decimal notation
 // Language: Clean
 
 exampleB :: Real Real -> Real
-exampleB    x    0E1  =  x
+exampleB    x    1E1  =  x
 exampleB    1E1  y    =  y
 exampleB    x    y    =  x + y
 ```
