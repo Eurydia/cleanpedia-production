@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-12T21:44:09.065+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-13T22:28:25.182+02:00"}
 ---
 
 
@@ -45,14 +45,8 @@ exampleA    True =  False
 exampleA    _    =  True
 ```
 
-The function `exampleA` returns `True` when it is called with `False` and vice versa.
-
-```Clean
-// Language: Clean
-
-exampleA True   // False
-exampleA False  //True
-```
+The `exampleA` function returns `True` when it is called with `False`.
+Otherwise, it returns `False`.
 
 Example B:
 
@@ -64,14 +58,5 @@ exampleB    True True  =  False
 exampleB    _    _     =  True
 ```
 
-The function `exampelB` returns `True` if both of its argument are `True`.
+The `exampleB` function returns `True` if both of its argument are `True`.
 Otherwise, it returns `False`.
-
-```Clean
-// Language: Clean
-
-exampleB True  True   // True
-exampleB True  False  // False
-exampleB False True   // False
-exampleB False False  // False
-```
