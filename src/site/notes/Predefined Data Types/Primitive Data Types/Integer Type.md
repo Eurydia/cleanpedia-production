@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-12T21:44:25.987+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/integer-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-13T11:42:16.575+02:00"}
 ---
 
 
@@ -67,18 +67,10 @@ exampleA    1   =  True
 exampleA    _   =  False
 ```
 
-The function `exampleA` returns `True` when it is called with 1.
-It returns `False` when it is called with other integer.
+The `exampleA` function returns `True` when it is called with 1.
+Otherwise, it returns `False`.
 
-```Clean
-// Language: Clean
-
-exampleA 1    // True
-exampleA 01   // True
-exampleA 0x1  // True
-```
-
-From the example, it can be inferred that `exampleA` has two alternative variants, which are equivalent to the original.
+It has two equivalent variants.
 
 One variant is obtained by using octal notation instead of decimal notation.
 
@@ -111,10 +103,10 @@ exampleB    0   y   =  y
 exampleB    x   y   =  x + y
 ```
 
-The function `exampleB` performs integer addition.
+The `exampleB` function performs integer addition.
 If one of its argument is 0, it returns the other argument.
 
-In this example, the function `exampleB` has many equivalent variants.
+It has many equivalent variants.
 
 One variant is obtained by using octal notation instead of decimal notation.
 
