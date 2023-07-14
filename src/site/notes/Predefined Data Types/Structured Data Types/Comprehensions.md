@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-14T11:04:31.313+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-14T18:27:53.095+02:00"}
 ---
 
 
@@ -7,18 +7,14 @@
 
 They provide an alternative way to implicitly construct lists and arrays, but they cannot be used as a pattern.
 
-In this note, comprehensions are used to construct lazy lists.
-However, any type of list or array can be constructed.
+## General Syntax
 
-## Example A: Simple Generators
+In this note, comprehensions are used to construct lazy lists, while it is possible to construct other list or array types.
+
+### Example A: Simple Generators
 
 Comprehensions iterate over a *generator*, which is an existing list or array.
 In each iteration, an element is extracted from the generator.
-
-The extracted element is called a *selector*.
-If the generator contains a non-primitive data type, patterns can be used as selector.
-
-See [[Predefined Data Types/Structured Data Types (Index)\|Structured Data Types (Index)]] and [[_content/User-Defined Types\|User-Defined Types]] for additional information on destructuring pattern.
 
 A left arrow (`<-`) is used to extract elements from a list generator.
 
@@ -48,7 +44,7 @@ for e in lsGen:
 	listA.append(e)
 ```
 
-## Example B: Nesting Generators
+### Example B: Nesting Generators
 
 Commas (`,`) are used to join generators by nesting.
 The right-most generator is the fastest.
@@ -74,7 +70,7 @@ for eX in lsGenX:
 		listB.append((eX, eY))
 ```
 
-## Example C: Zipping Generators
+### Example C: Zipping Generators
 
 Ampersands (`&`) are used to join generators by zipping.
 Iteration stops as soon as one generator runs out of element.
@@ -99,11 +95,11 @@ for eX, eY in zip(lsGenX, lsGenY):
 	listC.append((eX, eY))
 ```
 
-## Example D: Nesting and Zipping Generators
+### Example D: Nesting and Zipping Generators
 
 Ampersands bind more tightly than commas when joining generators.
 
-### Example Da
+#### Example Da
 
 ```Clean
 // Langauge: Clean
@@ -127,7 +123,7 @@ for eX, eY in zip(lsGenX, lsGenY):
 		listDa.append((eX, eY, eZ))
 ```
 
-### Example Db
+#### Example Db
 
 ```Clean
 // Langauge: Clean
@@ -151,7 +147,7 @@ for eX in lsGenX:
 		listDb.append((eX, eY, eZ))
 ```
 
-## Example E: Conditional Iteration
+### Example E: Conditional Iteration
 
 A condition can be introduced after each generator.
 An iteration is skipped if it fails to satisfy the condition.
@@ -175,11 +171,11 @@ for e in lsGen:
 	listEa.append(e)
 ```
 
-## Example F: Conditional Iteration in Nested Generators
+### Example F: Conditional Iteration in Nested Generators
 
 Each nested generator can have its own condition.
 
-### Example Fa
+#### Example Fa
 
 ```Clean
 // Langauge: Clean
@@ -206,7 +202,7 @@ for eX in lsGenX:
 		listFa.append((eX, eY))
 ```
 
-### Example Fb
+#### Example Fb
 
 ```Clean
 // Langauge: Clean
@@ -233,11 +229,11 @@ for eX in lsGenX:
 		listFb.append((eX, eY))
 ```
 
-## Example G: Conditional Iteration in Zipped Generators
+### Example G: Conditional Iteration in Zipped Generators
 
 A group of zipped generators can only have a condition.
 
-### Example Ga
+#### Example Ga
 
 ```Clean
 // Langauge: Clean
@@ -261,7 +257,7 @@ for eX, Ey in zip(lsGenX, lsGenY):
 	listGa.append((eX, eY))
 ```
 
-### Example Gb
+#### Example Gb
 
 ```Clean
 // Langauge: Clean
@@ -285,7 +281,7 @@ for eX, eY in zip(lsGenX, lsGenY):
 	listGb.append((eX, eY))
 ```
 
-### Example Gc
+#### Example Gc
 
 ```Clean
 // Langauge: Clean
@@ -313,3 +309,7 @@ for eW, eX in zip(lsGenW, lsGenX):
 			continue
 		listGc.append((eX, eY))
 ```
+
+## Left Side of Comprehensions
+
+## Comprehensions with Multi-Dimensional
