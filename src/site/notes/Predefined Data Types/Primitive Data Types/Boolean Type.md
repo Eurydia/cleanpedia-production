@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-13T22:28:25.182+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-14T20:43:09.436+02:00"}
 ---
 
 
@@ -35,7 +35,7 @@ x =  False
 
 ## Using Boolean Literal as Pattern
 
-Example A:
+### Example A
 
 ```Clean
 // Language: Clean
@@ -45,10 +45,20 @@ exampleA    True =  False
 exampleA    _    =  True
 ```
 
-The `exampleA` function returns `True` when it is called with `False`.
-Otherwise, it returns `False`.
+Python equivalent:
 
-Example B:
+```Python
+# Python
+
+def exampleA(arg: bool) -> bool:
+	match arg:
+		case True:
+			return False
+		case _:
+			return True
+```
+
+### Example B
 
 ```Clean
 // Language: Clean
@@ -58,5 +68,15 @@ exampleB    True True  =  False
 exampleB    _    _     =  True
 ```
 
-The `exampleB` function returns `True` if both of its argument are `True`.
-Otherwise, it returns `False`.
+Python equivalent:
+
+```Python
+# Python
+
+def exampleB(argA: bool, argB: bool) -> bool:
+	match (argA,  argB):
+		case (True, True):
+			return True
+		case _:
+			return False
+```
