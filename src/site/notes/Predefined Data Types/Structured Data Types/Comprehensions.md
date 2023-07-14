@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-13T22:27:40.805+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/structured-data-types/comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-14T11:04:31.313+02:00"}
 ---
 
 
@@ -12,8 +12,13 @@ However, any type of list or array can be constructed.
 
 ## Example A: Simple Generators
 
-Comprehensions iterate over a generator, which is an existing list or array.
+Comprehensions iterate over a *generator*, which is an existing list or array.
 In each iteration, an element is extracted from the generator.
+
+The extracted element is called a *selector*.
+If the generator contains a non-primitive data type, patterns can be used as selector.
+
+See [[Predefined Data Types/Structured Data Types (Index)\|Structured Data Types (Index)]] and [[_content/User-Defined Types\|User-Defined Types]] for additional information on destructuring pattern.
 
 A left arrow (`<-`) is used to extract elements from a list generator.
 
@@ -40,7 +45,7 @@ Python equivalent:
 
 listA: list[any] = []
 for e in lsGen:
-	lista.append(e)
+	listA.append(e)
 ```
 
 ## Example B: Nesting Generators
@@ -230,7 +235,7 @@ for eX in lsGenX:
 
 ## Example G: Conditional Iteration in Zipped Generators
 
-Zipped generators can only have a condition.
+A group of zipped generators can only have a condition.
 
 ### Example Ga
 
@@ -274,8 +279,37 @@ Python equivalent:
 # Language: Python
 
 listGb: list[tuple[any, any]] = []
-for eX, Ey in zip(lsGenX, lsGenY):
+for eX, eY in zip(lsGenX, lsGenY):
 	if not predY(eX, eY):
 		continue
 	listGb.append((eX, eY))
+```
+
+### Example Gc
+
+```Clean
+// Langauge: Clean
+
+listGc :: [ ( T, K ) ]
+listGc =  [ ( eX, eY ) \\ 
+    eW <- lsGenW & 
+    eX <- lsGenX | predWX eW eX ,
+    eY <- lsGenY &
+    eZ <- lsGenZ | predYZ eY eZ
+]
+```
+
+Python equivalent:
+
+```Python
+# Language: Python
+
+listGc: list[tuple[any, any]] = []
+for eW, eX in zip(lsGenW, lsGenX):
+	if not predWX(eW, eX):
+		continue
+	for eW, eX in zip(lsGenW, lsGenX):
+		if not predYZ(eY, eZ):
+			continue
+		listGc.append((eX, eY))
 ```
