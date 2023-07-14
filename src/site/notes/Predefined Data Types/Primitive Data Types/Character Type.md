@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-13T11:33:57.093+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-14T20:24:17.297+02:00"}
 ---
 
 
@@ -36,7 +36,7 @@ x =  '+'
 
 ## Using Character Literal as Pattern
 
-Example A:
+### Example A
 
 ```Clean
 // Language: Clean
@@ -46,10 +46,20 @@ exampleA    'G'  =  True
 exampleA    _    =  False
 ```
 
-The `exampleA` function returns `True` when it is called with upper case 'G'.
-Otherwise, it returns `False`.
+Python equivalent:
 
-Example B:
+```Python
+# Python
+
+def exampleA(arg: str) -> bool:
+	match arg:
+		case "G":
+			return True
+		case _:
+			return False
+```
+
+### Example B
 
 ```Clean
 // Language: Clean
@@ -60,10 +70,22 @@ exampleB    'g'  =  True
 exampleB    _    =  False
 ```
 
-The `exampleB` function returns `True` when it is called with lower case or upper case 'G'.
-Otherwise, it returns `False`.
+Python equivalent:
 
-Example C:
+```Python
+# Python
+
+def exampleB(arg: str) -> bool:
+	match arg:
+		case "G":
+			return True
+		case "g":
+			return True
+		case _:
+			return False
+```
+
+### Example C
 
 ```Clean
 // Language: Clean
@@ -73,8 +95,18 @@ exampleC    'G'  'G'  =  True
 exampleC    _    _    =  False
 ```
 
-The `exampleC` function returns `True` when it is called with two upper case 'G'.
-Otherwise, it returns `False`.
+Python equivalent:
+
+```Python
+# Python
+
+def exampleC(argA: str, argB: str) -> bool:
+	match (argA, argB):
+		case ("G", "G"):
+			return True
+		case _:
+			return False
+```
 
 Example D:
 
@@ -89,5 +121,21 @@ exampleD    'g'  'g'  =  True
 exampleD    _    _    =  False
 ```
 
-The `exampleD` function returns `True` when both of its arguments are 'G'.
-Otherwise, it returns `False`.
+Python equivalent:
+
+```Python
+# Python
+
+def exampleD(argA: str, argB: str) -> bool:
+	match (argA, argB):
+		case ("G", "G"):
+			return True
+		case ("G", "g"):
+			return True
+		case ("g", "G"):
+			return True
+		case ("g", "g"):
+			return True
+		case _:
+			return False
+```
