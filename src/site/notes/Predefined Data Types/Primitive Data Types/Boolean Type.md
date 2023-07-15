@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-14T20:43:09.436+02:00"}
+{"dg-publish":true,"permalink":"/predefined-data-types/primitive-data-types/boolean-type/","created":"2023-07-03T09:26:49.263+02:00","updated":"2023-07-14T20:48:05.849+02:00"}
 ---
 
 
@@ -73,7 +73,10 @@ Python equivalent:
 ```Python
 # Python
 
-def exampleB(argA: bool, argB: bool) -> bool:
+def exampleB(
+	argA: bool, 
+	argB: bool
+) -> bool:
 	match (argA,  argB):
 		case (True, True):
 			return True
