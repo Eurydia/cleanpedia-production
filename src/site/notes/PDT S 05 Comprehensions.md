@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-05-comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-14T18:27:53.095+02:00"}
+{"dg-publish":true,"permalink":"/pdt-s-05-comprehensions/","created":"2023-07-13T21:50:18.970+02:00","updated":"2023-07-16T18:54:50.292+02:00"}
 ---
 
 
@@ -309,7 +309,3 @@ for eW, eX in zip(lsGenW, lsGenX):
 			continue
 		listGc.append((eX, eY))
 ```
-
-## Left Side of Comprehensions
-
-## Comprehensions with Multi-Dimensional
