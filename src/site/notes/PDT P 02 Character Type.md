@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-02-character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-14T20:49:44.066+02:00"}
+{"dg-publish":true,"permalink":"/pdt-p-02-character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-16T17:40:34.030+02:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 Characters are represented using 8 bits values.
 
-For built-In functions on character type, see [[Appendix A/StdChar\|StdChar]] module for additional information.
+For built-In functions on character type, see [[APX A 03 StdChar\|APX A 03 StdChar]] module for additional information.
 
 ## Character Type Declaration
 
@@ -34,114 +34,3 @@ x =  'A'
 x =  '+'
 ```
 
-## Using Character Literal as Pattern
-
-### Example A
-
-```Clean
-// Language: Clean
-
-exampleA :: Char -> Bool
-exampleA    'G'  =  True
-exampleA    _    =  False
-```
-
-Python equivalent:
-
-```Python
-# Python
-
-def exampleA(arg: str) -> bool:
-	match arg:
-		case "G":
-			return True
-		case _:
-			return False
-```
-
-### Example B
-
-```Clean
-// Language: Clean
-
-exampleB :: Char -> Bool
-exampleB    'G'  =  True
-exampleB    'g'  =  True
-exampleB    _    =  False
-```
-
-Python equivalent:
-
-```Python
-# Python
-
-def exampleB(arg: str) -> bool:
-	match arg:
-		case "G":
-			return True
-		case "g":
-			return True
-		case _:
-			return False
-```
-
-### Example C
-
-```Clean
-// Language: Clean
-
-exampleC :: Char Char -> Bool
-exampleC    'G'  'G'  =  True
-exampleC    _    _    =  False
-```
-
-Python equivalent:
-
-```Python
-# Python
-
-def exampleC(
-	argA: str, 
-	argB: str
-) -> bool:
-	match (argA, argB):
-		case ("G", "G"):
-			return True
-		case _:
-			return False
-```
-
-### Example D
-
-```Clean
-// Language: Clean
-
-exampleD :: Char Char -> Bool
-exampleD    'G'  'G'  =  True
-exampleD    'G'  'g'  =  True
-exampleD    'g'  'G'  =  True
-exampleD    'g'  'g'  =  True
-exampleD    _    _    =  False
-```
-
-Python equivalent:
-
-```Python
-# Python
-
-def exampleD(
-	argA: str, 
-	argB: str
-) -> bool:
-	match (argA, argB):
-		case ("G", "G"):
-			return True
-		case ("G", "g"):
-			return True
-		case ("g", "G"):
-			return True
-		case ("g", "g"):
-			return True
-		case _:
-			return False
-```
