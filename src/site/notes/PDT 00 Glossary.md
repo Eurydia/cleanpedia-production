@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-00-glossary/","created":"2023-07-03T09:28:35.191+02:00","updated":"2023-07-16T17:26:52.691+02:00"}
+{"dg-publish":true,"permalink":"/pdt-00-glossary/","created":"2023-07-03T09:28:35.191+02:00","updated":"2023-07-18T20:07:50.392+02:00"}
 ---
 
 
