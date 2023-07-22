@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apx-a-02-std-bool/","created":"2023-06-20T23:37:36.389+07:00","updated":"2023-07-16T22:30:35.318+07:00"}
+{"dg-publish":true,"permalink":"/apx-a-02-std-bool/","created":"2023-06-20T23:37:36.389+07:00","updated":"2023-07-23T03:57:42.105+07:00"}
 ---
 
 
@@ -79,7 +79,7 @@ False == False  // True
 
 **Behavior**
 
-It returns true if  `a` or `b` is true.
+It returns true if `a` or `b` is true.
 
 **Usage**
 
