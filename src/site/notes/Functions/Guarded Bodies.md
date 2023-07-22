@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T18:37:36.403+02:00","updated":"2023-06-24T15:19:28.909+02:00"}
+{"dg-publish":true,"permalink":"/functions/guarded-bodies/","created":"2023-06-20T23:37:36.403+07:00","updated":"2023-06-24T20:19:28.909+07:00"}
 ---
 
 
