@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/guarded-body-rules/","created":"2023-06-20T18:37:36.402+02:00","updated":"2023-06-21T11:48:14.658+02:00"}
+{"dg-publish":true,"permalink":"/functions/guarded-body-rules/","created":"2023-06-20T23:37:36.402+07:00","updated":"2023-06-21T16:48:14.658+07:00"}
 ---
 
 
