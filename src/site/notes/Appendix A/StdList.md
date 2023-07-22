@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-list/","created":"2023-06-20T23:37:36.393+07:00","updated":"2023-07-21T00:27:31.572+07:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-list/","created":"2023-06-20T23:37:36.393+07:00","updated":"2023-07-23T03:57:42.129+07:00"}
 ---
 
 
@@ -17,7 +17,7 @@ When imported, it allows for:
 
 Visit [StdInt](https://cloogle.org/src/#base-stdenv/StdInt;icl;line=1) on Cloogle for source code of this module.
 
-## Basic Operations 
+## Basic Operations
 
 ### Concatenation
 
@@ -167,7 +167,7 @@ Additionally, equality operation must be defined on $\textbf{T}$.
 [1, 3] <> [1, 2]    // True
 ```
 
-###  Less Than
+### Less Than
 
 **Signature**
 
