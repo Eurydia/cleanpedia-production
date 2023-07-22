@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apx-a-00-glossary/","created":"2023-06-20T23:37:36.387+07:00","updated":"2023-07-16T22:36:49.423+07:00"}
+{"dg-publish":true,"permalink":"/apx-a-00-glossary/","created":"2023-06-20T23:37:36.387+07:00","updated":"2023-07-23T03:57:42.109+07:00"}
 ---
 
 
