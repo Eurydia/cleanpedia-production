@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-real/","created":"2023-06-20T18:37:36.396+02:00","updated":"2023-07-12T11:53:41.409+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-real/","created":"2023-06-20T23:37:36.396+07:00","updated":"2023-07-12T16:53:41.409+07:00"}
 ---
 
 
