@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T16:07:50.699+07:00","updated":"2023-06-24T16:42:55.355+07:00"}
+{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T16:07:50.699+07:00","updated":"2023-07-23T03:57:42.084+07:00"}
 ---
 
+# Function Implementation Selection Steps In Action
 
 To demonstrate, a function called `safeDivide` is described as follows:
 - accepts two integers as arguments, 
@@ -113,7 +114,7 @@ safeDivide m n = m / n
 safeDivide m 0 = 0
 ```
 
-The second function implementation is never reached even if `safeDivide`  is called with 0.
+The second function implementation is never reached even if `safeDivide` is called with 0.
 
 ```Clean
 // Language: Clean
