@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/00-cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T18:37:36.378+02:00","updated":"2023-07-16T17:24:03.795+02:00"}
+{"dg-publish":true,"permalink":"/00-cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T23:37:36.378+07:00","updated":"2023-07-16T22:24:03.795+07:00"}
 ---
 
 
