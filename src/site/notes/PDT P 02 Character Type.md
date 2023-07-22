@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-02-character-type/","created":"2023-07-03T09:26:33.060+02:00","updated":"2023-07-16T17:40:34.030+02:00"}
+{"dg-publish":true,"permalink":"/pdt-p-02-character-type/","created":"2023-07-03T14:26:33.060+07:00","updated":"2023-07-16T22:40:34.030+07:00"}
 ---
 
 
