@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apx-a-03-std-char/","created":"2023-06-20T23:37:36.390+07:00","updated":"2023-07-12T16:34:24.965+07:00"}
+{"dg-publish":true,"permalink":"/apx-a-03-std-char/","created":"2023-06-20T23:37:36.390+07:00","updated":"2023-07-23T03:57:42.102+07:00"}
 ---
 
 
@@ -283,7 +283,7 @@ digitToInt    a    => ...
 
 **Behavior**
 
-It returns ASCII code of `a` offset by  `-48`.
+It returns ASCII code of `a` offset by `-48`.
 
 **Usage**
 
