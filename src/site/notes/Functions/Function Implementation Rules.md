@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T18:37:36.404+02:00","updated":"2023-06-26T11:41:33.538+02:00"}
+{"dg-publish":true,"permalink":"/functions/function-implementation-rules/","created":"2023-06-20T23:37:36.404+07:00","updated":"2023-06-26T16:41:33.538+07:00"}
 ---
 
 
