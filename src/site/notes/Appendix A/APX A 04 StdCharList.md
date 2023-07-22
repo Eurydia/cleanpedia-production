@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/apx-a-04-std-char-list/","created":"2023-06-20T18:37:36.390+02:00","updated":"2023-07-16T17:37:11.551+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/apx-a-04-std-char-list/","created":"2023-06-20T23:37:36.390+07:00","updated":"2023-07-16T22:37:11.551+07:00"}
 ---
 
 
