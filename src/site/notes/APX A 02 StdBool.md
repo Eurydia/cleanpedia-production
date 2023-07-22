@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apx-a-02-std-bool/","created":"2023-06-20T18:37:36.389+02:00","updated":"2023-07-16T17:30:35.318+02:00"}
+{"dg-publish":true,"permalink":"/apx-a-02-std-bool/","created":"2023-06-20T23:37:36.389+07:00","updated":"2023-07-16T22:30:35.318+07:00"}
 ---
 
 
