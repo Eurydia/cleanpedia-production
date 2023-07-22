@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/00-cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T23:37:36.378+07:00","updated":"2023-07-16T22:24:03.795+07:00"}
+{"dg-publish":true,"permalink":"/00-cleanpedia/","tags":["gardenEntry"],"created":"2023-06-20T23:37:36.378+07:00","updated":"2023-07-23T03:57:42.146+07:00"}
 ---
 
 
@@ -12,4 +12,4 @@ Major notes:
 
 
 
-## About 
+## About
