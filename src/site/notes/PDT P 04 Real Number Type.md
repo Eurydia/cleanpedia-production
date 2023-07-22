@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-04-real-number-type/","created":"2023-07-03T09:26:06.677+02:00","updated":"2023-07-16T17:40:39.149+02:00"}
+{"dg-publish":true,"permalink":"/pdt-p-04-real-number-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-16T22:40:39.149+07:00"}
 ---
 
 
