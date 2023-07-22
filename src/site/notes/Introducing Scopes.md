@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/introducing-scopes/","created":"2023-06-20T23:37:36.385+07:00","updated":"2023-07-02T04:27:42.207+07:00"}
+{"dg-publish":true,"permalink":"/introducing-scopes/","created":"2023-06-20T23:37:36.385+07:00","updated":"2023-07-23T03:57:42.050+07:00"}
 ---
 
 
