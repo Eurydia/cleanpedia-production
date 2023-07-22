@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T11:07:50.699+02:00","updated":"2023-06-24T11:42:55.355+02:00"}
+{"dg-publish":true,"permalink":"/functions/example/function-implementation-selection-steps-in-action/","created":"2023-06-24T16:07:50.699+07:00","updated":"2023-06-24T16:42:55.355+07:00"}
 ---
 
 
