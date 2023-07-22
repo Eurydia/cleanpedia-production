@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T18:37:36.392+02:00","updated":"2023-07-12T11:49:54.057+02:00"}
+{"dg-publish":true,"permalink":"/appendix-a/std-int/","created":"2023-06-20T23:37:36.392+07:00","updated":"2023-07-12T16:49:54.057+07:00"}
 ---
 
 
