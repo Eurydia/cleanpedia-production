@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-boolean-type/","created":"2023-07-03T14:26:49.263+07:00","updated":"2023-07-23T03:57:41.967+07:00"}
+{"dg-publish":true,"permalink":"/pdt-p-boolean-type/","created":"2023-07-03T14:26:49.263+07:00","updated":"2023-07-24T23:15:27.012+07:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 Booleans are represented using 8 bits values.
 
-For built-in functions and operations on Boolean type, see [[APX A 02 StdBool\|APX A 02 StdBool]].
+For built-in functions and operations on Boolean type, see [[APX A StdBool\|APX A StdBool]].
 
 ## Boolean Type Declaration
 
