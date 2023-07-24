@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-integer-type/","created":"2023-07-03T14:26:33.060+07:00","updated":"2023-07-23T03:57:41.963+07:00"}
+{"dg-publish":true,"permalink":"/pdt-p-integer-type/","created":"2023-07-03T14:26:33.060+07:00","updated":"2023-07-24T23:16:33.629+07:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 Integers are represented using 32 bits or 64 bits values.
 
-For built-in functions and operations on integer type, see [[Appendix A/StdInt\|Appendix A/StdInt]].
+For built-in functions and operations on integer type, see [[APX A StdInt\|APX A StdInt]].
 
 ## Integer Type Declaration
 
