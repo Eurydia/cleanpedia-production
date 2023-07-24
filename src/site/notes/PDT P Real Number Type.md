@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-real-number-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-23T03:57:41.959+07:00"}
+{"dg-publish":true,"permalink":"/pdt-p-real-number-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-24T23:17:18.433+07:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 Real numbers are represented by 64 bits values.
 
-For built-in functions and operations on real number type, see [[Appendix A/StdReal\|Appendix A/StdReal]] module.
+For built-in functions and operations on real number type, see [[APX A StdReal\|APX A StdReal]] module.
 
 ## Real Number Type Declaration
 
