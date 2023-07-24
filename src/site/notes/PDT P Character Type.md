@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-p-character-type/","created":"2023-07-03T14:26:33.060+07:00","updated":"2023-07-23T03:57:41.967+07:00"}
+{"dg-publish":true,"permalink":"/pdt-p-character-type/","created":"2023-07-03T14:26:33.060+07:00","updated":"2023-07-24T23:15:42.726+07:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 Characters are represented using 8 bits values.
 
-For built-In functions and operations on character type, see [[APX A 03 StdChar\|APX A 03 StdChar]].
+For built-In functions and operations on character type, see [[APX A StdChar\|APX A StdChar]].
 
 ## Character Type Declaration
 
