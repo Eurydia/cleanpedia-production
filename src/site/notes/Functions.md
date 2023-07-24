@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/","created":"2023-06-21T00:38:59.204+07:00","updated":"2023-07-23T03:57:42.050+07:00"}
+{"dg-publish":true,"permalink":"/functions/","created":"2023-06-21T00:38:59.204+07:00","updated":"2023-07-24T23:16:33.591+07:00"}
 ---
 
 # Functions
@@ -124,7 +124,7 @@ In other word, `exampleC` is composed of three indirect function calls, instead 
 
 ## Constants
 
-[[Appendix A/StdInt\|StdInt]]
+[[APX A StdInt\|APX A StdInt]]
 
 ---
 
