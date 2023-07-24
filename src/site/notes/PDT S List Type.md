@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-list-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-23T04:19:36.359+07:00"}
+{"dg-publish":true,"permalink":"/pdt-s-list-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-24T23:17:00.381+07:00"}
 ---
 
 
@@ -8,7 +8,7 @@
 Lists can contain an infinite number of elements. 
 Elements of a list must be of the same type. 
 
-For built-in functions and operations on list, see [[Appendix A/StdList\|StdList]], [[Appendix A/APX A 04 StdCharList\|APX A 04 StdCharList]], and [[Appendix A/StdOrdList\|StdOrdList]] module for additional information.
+For built-in functions and operations on list, see [[APX A StdList\|APX A StdList]], [[APX A StdCharList\|APX A StdCharList]], and [[APX A StdOrdList\|APX A StdOrdList]] module for additional information.
 
 ## List Type Declaration
 
