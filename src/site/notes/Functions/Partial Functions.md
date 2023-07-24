@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/functions/partial-functions/","created":"2023-06-20T23:37:36.406+07:00","updated":"2023-07-23T03:57:42.058+07:00"}
+{"dg-publish":true,"permalink":"/functions/partial-functions/","created":"2023-06-20T23:37:36.406+07:00","updated":"2023-07-24T23:16:56.966+07:00"}
 ---
 
 # Partial Functions
@@ -14,6 +14,6 @@ In a practical environment, however, it is easier to accidentally defined a part
 
 ## Resolving Partial Functions
 
-A built-in function called `abort` from [[Appendix A/StdMisc\|StdMisc]] completes a function by terminating the program early.
+A built-in function called `abort` from [[APX A StdMisc\|APX A StdMisc]] completes a function by terminating the program early.
 
 ---
