@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-comprehensions/","created":"2023-07-14T02:50:18.970+07:00","updated":"2023-07-23T03:57:41.946+07:00"}
+{"dg-publish":true,"permalink":"/pdt-s-comprehensions/","created":"2023-07-14T02:50:18.970+07:00","updated":"2023-07-25T13:08:15.124+07:00"}
 ---
 
 
@@ -7,31 +7,32 @@
 
 They provide an alternative way to implicitly construct lists and arrays, but they cannot be used as a pattern.
 
-## General Syntax
-
 While it is possible to construct every types of list or array with comprehension, for simplicity, they are used to construct lazy lists.
 
-### Example A: Simple Generators
+Comprehensions iterate over a **generator**, which is an existing list or array.
+In each iteration, the left-most element is extracted from the generator.
+Its value is stored in a **selector**.
 
-Comprehensions iterate over a *generator*, which is an existing list or array.
-In each iteration, an element is extracted from the generator, and its value is stored in a *selector*.
+## Usage Examples
+
+### Extracting Elements From Different Kinds of Generators
 
 A left arrow (`<-`) is used to extract elements from a list generator.
 
 ```Clean
 // Language: Clean
 
-listA :: [ T ]
-listA =  [ e \\ e <- lsGen ]
+x ::  [ T ]
+x = [ e \\ e <- lsGen ]
 ```
 
-An array generator uses an arrow which has a colon (`:`) at the end.
+An array generator uses a different arrow which has a colon (`:`) at the end.
 
 ```Clean
 // Language: Clean
 
-listA :: [ T ]
-listA =  [ e \\ e <-: arrGen ]
+x :: [ T ]
+x =  [ e \\ e <-: arrGen ]
 ```
 
 An overloaded list generator uses an arrow which has a vertical bar (`|`) between the arrow head and the shaft.
@@ -39,22 +40,21 @@ An overloaded list generator uses an arrow which has a vertical bar (`|`) betwee
 ```Clean
 // Language: Clean
 
-listA :: [ T ]
-listA =  [ e \\ e <|- overloadedLsGen ]
+x :: [ T ]
+x =  [ e \\ e <|- overloadedLsGen ]
 ```
-
 
 Python equivalent:
 
 ```Python
 # Language: Python
 
-listA: list[any] = []
+x: list[any] = []
 for e in lsGen:
-	listA.append(e)
+	x.append(e)
 ```
 
-### Example B: Nesting Generators
+### Nesting Generators
 
 Commas (`,`) are used to join generators by nesting.
 The right-most generator is the fastest.
@@ -62,8 +62,8 @@ The right-most generator is the fastest.
 ```Clean
 // Language: Clean
 
-listB :: [ ( T, K ) ]
-listB =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX , 
     eY <- lsGenY 
 ]
@@ -74,13 +74,13 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listB: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX in lsGenX:
 	for eY in lsGenY:
-		listB.append((eX, eY))
+		x.append((eX, eY))
 ```
 
-### Example C: Zipping Generators
+### Zipping Generators
 
 Ampersands (`&`) are used to join generators by zipping.
 Iteration stops as soon as one generator runs out of element.
@@ -88,8 +88,8 @@ Iteration stops as soon as one generator runs out of element.
 ```Clean
 // Language: Clean
 
-listC :: [ ( T, K ) ]
-listC =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY
 ]
@@ -100,22 +100,22 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listC: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX, eY in zip(lsGenX, lsGenY):
-	listC.append((eX, eY))
+	x.append((eX, eY))
 ```
 
-### Example D: Nesting and Zipping Generators
+### Nesting and Zipping Generators
 
 Ampersands bind more tightly than commas when joining generators.
 
-#### Example Da
+Example 1:
 
 ```Clean
 // Langauge: Clean
 
-listDa :: [ ( T, K, V ) ]
-listDa =  [ ( eX, eY, eZ ) \\ 
+x :: [ ( T, K, V ) ]
+x =  [ ( eX, eY, eZ ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY , 
     eZ <- lsGenZ
@@ -127,19 +127,19 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listDa: list[tuple[any, any, any]] = []
+x: list[tuple[any, any, any]] = []
 for eX, eY in zip(lsGenX, lsGenY):
 	for eZ in lsGenZ:
-		listDa.append((eX, eY, eZ))
+		x.append((eX, eY, eZ))
 ```
 
-#### Example Db
+Example 2:
 
 ```Clean
 // Langauge: Clean
 
-listDb :: [ ( T, K, V ) ]
-listDb =  [ ( eX, eY, eZ ) \\ 
+x :: [ ( T, K, V ) ]
+x =  [ ( eX, eY, eZ ) \\ 
     eX <- lsGenX , 
     eY <- lsGenY & 
     eZ <- lsGenZ 
@@ -151,13 +151,13 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listDb: list[tuple[any, any, any]] = []
+x: list[tuple[any, any, any]] = []
 for eX in lsGenX:
 	for eY, eZ in zip(lsGenY, lsGenZ):
-		listDb.append((eX, eY, eZ))
+		x.append((eX, eY, eZ))
 ```
 
-### Example E: Conditional Iteration
+### Conditional Iteration
 
 A condition can be introduced after each generator.
 An iteration is skipped if it fails to satisfy the condition.
@@ -165,8 +165,8 @@ An iteration is skipped if it fails to satisfy the condition.
 ```Clean
 // Langauge: Clean
 
-listEa :: [ T ]
-listEa =  [ e \\ e <- lsGen | pred e ]
+x :: [ T ]
+x =  [ e \\ e <- lsGen | pred e ]
 ```
 
 Python equivalent:
@@ -174,24 +174,24 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listEa: list[any] = []
+x: list[any] = []
 for e in lsGen:
 	if not pred(e):
 		continue
-	listEa.append(e)
+	x.append(e)
 ```
 
-### Example F: Conditional Iteration in Nested Generators
+### Conditional Iteration in Nested Generators
 
 Each nested generator can have its own condition.
 
-#### Example Fa
+Example 1:
 
 ```Clean
 // Langauge: Clean
 
-listFa :: [ ( T, K ) ]
-listFa =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX | predX eX , 
     eY <- lsGenY | predY eY
 ]
@@ -202,23 +202,23 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listFa: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX in lsGenX:
 	if not predX(eX):
 		continue
 	for eY in lsGenY:
 		if not predY(eY):
 			continue
-		listFa.append((eX, eY))
+		x.append((eX, eY))
 ```
 
-#### Example Fb
+Example 2:
 
 ```Clean
 // Langauge: Clean
 
-listFb :: [ ( T, K ) ]
-listFb =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX | predX eX , 
     eY <- lsGenY | predY eX eY
 ]
@@ -227,29 +227,29 @@ listFb =  [ ( eX, eY ) \\
 Python equivalent:
 
 ```Python
-# Language: Python
+# Language: Python`
 
-listFb: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX in lsGenX:
 	if not predX(eX):
 		continue
 	for eY in lsGenY:
 		if not predY(eX, eY):
 			continue
-		listFb.append((eX, eY))
+		x.append((eX, eY))
 ```
 
-### Example G: Conditional Iteration in Zipped Generators
+### Conditional Iteration in Zipped Generators
 
 A group of zipped generators can only have a condition.
 
-#### Example Ga
+Example 1:
 
 ```Clean
 // Langauge: Clean
 
-listGa :: [ ( T, K ) ]
-listGa =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY | pred eX 
 ]
@@ -260,20 +260,20 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listGa: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX, Ey in zip(lsGenX, lsGenY):
 	if not predY(eX):
 		continue
-	listGa.append((eX, eY))
+	x.append((eX, eY))
 ```
 
-#### Example Gb
+Example 2:
 
 ```Clean
 // Langauge: Clean
 
-listGb :: [ ( T, K ) ]
-listGb =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY | pred eX eY
 ]
@@ -284,20 +284,20 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listGb: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eX, eY in zip(lsGenX, lsGenY):
 	if not predY(eX, eY):
 		continue
-	listGb.append((eX, eY))
+	x.append((eX, eY))
 ```
 
-#### Example Gc
+Example 3:
 
 ```Clean
 // Langauge: Clean
 
-listGc :: [ ( T, K ) ]
-listGc =  [ ( eX, eY ) \\ 
+x :: [ ( T, K ) ]
+x =  [ ( eX, eY ) \\ 
     eW <- lsGenW & 
     eX <- lsGenX | predWX eW eX ,
     eY <- lsGenY &
@@ -310,18 +310,36 @@ Python equivalent:
 ```Python
 # Language: Python
 
-listGc: list[tuple[any, any]] = []
+x: list[tuple[any, any]] = []
 for eW, eX in zip(lsGenW, lsGenX):
 	if not predWX(eW, eX):
 		continue
 	for eW, eX in zip(lsGenW, lsGenX):
 		if not predYZ(eY, eZ):
 			continue
-		listGc.append((eX, eY))
+		x.append((eX, eY))
 ```
 
-## Interesting Uses of Comprehensions
+## Additional Usage Examples
 
-### Explicit List To Array Conversion
+### Conversion Between List and Array
 
-Lists are arrays are interage
+Conversion between a lazy list and a lazy array can be done with comprehension.
+
+Example 1:
+
+```Clean
+// Language: Clean
+
+xList :: [ T ]
+xList =  [ e \\ e <-: xArr ] 
+```
+
+Example 2:
+
+```Clean
+// Language: Clean
+
+xArr :: { T }
+xArr =  { e \\ e <- xList } 
+```
