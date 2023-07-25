@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-list-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-24T23:17:00.381+07:00"}
+{"dg-publish":true,"permalink":"/pdt-s-list-type/","created":"2023-07-03T14:26:06.677+07:00","updated":"2023-07-25T11:37:27.444+07:00"}
 ---
 
 
@@ -44,8 +44,7 @@ x =  [ 1, 2, 3 ]
 ```
 
 Colons (`:`) act as right-associate pseudo-operator in list construction.
-They accept two arguments.
-An element on its left, and a list on its right.
+They accept two arguments, which are an element on its left and a list on its right.
 They evaluate by prepending the element to the front of the list, and return a new list.
 
 ```Clean
@@ -119,7 +118,7 @@ So far only lazy lists are discussed, but other types of lists are:
 
 They are considered different type with unique time and space properties.
 
-A function defined on one type of list cannot be applied to others.
+Functions defined on one type of list cannot be applied to others.
 However, a function defined on overloaded list can be applied to any type of list.
 
 Head strict lists are explicitly declared by placing an exclamation mark (`!`) after the opening square bracket (`[! ... ]`).
