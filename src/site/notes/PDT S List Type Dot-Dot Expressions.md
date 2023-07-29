@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-list-type-dot-dot-expressions/","created":"2023-07-17T01:39:07.306+07:00","updated":"2023-07-25T12:30:28.732+07:00"}
+{"dg-publish":true,"permalink":"/pdt-s-list-type-dot-dot-expressions/","created":"2023-07-17T01:39:07.306+07:00","updated":"2023-07-28T16:41:49.959+07:00"}
 ---
 
 
@@ -20,7 +20,7 @@ The full syntax has three components, but only the first component is mandatory.
 
 ## Usage Examples
 
-If only `init` component is given, such an expression evaluates to an infinite list.
+If only `init` component is given, it evaluates to an infinite list.
 Consecutive elements differ by one unit.
 
 ```Clean
@@ -30,7 +30,7 @@ x :: [ Int ]
 x =  [ 1 .. ]  // [ 1, 2, 3 and so on ]
 ```
 
-If `init` and `last` components are given, such an expression evaluates to a finite list.
+If `init` and `last` components are given, it evaluates to a finite list.
 Consecutive elements differ by one unit.
 
 ```Clean
@@ -40,7 +40,7 @@ x :: [ Int ]
 x =  [ 1 .. 4 ]  // [ 1, 2, 3, 4 ] 
 ```
 
-If `init` and `next` components are given, such an expression evaluates to an infinite list.
+If `init` and `next` components are given, it evaluates to an infinite list.
 Consecutive elements differ by `next` minus `init` unit.
 
 ```Clean
@@ -59,7 +59,7 @@ x :: [ Int ]
 x =  [ 1, 0 .. ]  // [ 1, 0, -1 and so on ]
 ```
 
-If `init`, `next`, and `last` components are given, such an expression evaluates to a finite list.
+If `init`, `next`, and `last` components are given, it evaluates to a finite list.
 Consecutive elements differ by `next` minus `init` unit.
 
 ```Clean
