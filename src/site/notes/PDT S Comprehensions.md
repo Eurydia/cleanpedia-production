@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/pdt-s-comprehensions/","created":"2023-07-14T02:50:18.970+07:00","updated":"2023-07-30T21:58:03.341+07:00"}
+{"dg-publish":true,"permalink":"/pdt-s-comprehensions/","created":"2023-07-14T02:50:18.970+07:00","updated":"2023-08-01T21:00:27.824+07:00"}
 ---
 
 
@@ -17,22 +17,15 @@ Its value is stored in a *selector*.
 
 ### Extracting Elements From Generators
 
-A left arrow (`<-`) is used to extract elements from *list generators*.
+Each generator requires a unique "arrow" to extract elements.
+
+A left arrow (`<-`) is used to extract elements from *list generators*, except *overloaded list generators*.
 
 ```Clean
 // Language: Clean
 
- ::  [ T ]
-x = [ e \\ e <- lsGen ]
-```
-
-A left arrow with colon at the end (`<-:`) is used to extract elements from *array generators*.
-
-```Clean
-// Language: Clean
-
-x :: [ T ]
-x =  [ e \\ e <-: arrGen ]
+listA ::  [ T ]
+listA = [ e \\ e <- lsGen ]
 ```
 
 A left arrow with vertical bar between the arrowhead and the shaft (`<|-`) is used to extract elements from *overloaded list generators*.
@@ -40,8 +33,17 @@ A left arrow with vertical bar between the arrowhead and the shaft (`<|-`) is us
 ```Clean
 // Language: Clean
 
-x :: [ T ]
-x =  [ e \\ e <|- overloadedLsGen ]
+listA :: [ T ]
+listA =  [ e \\ e <|- overloadedLsGen ]
+```
+
+A left arrow with colon at the end (`<-:`) is used to extract elements from *array generators*.
+
+```Clean
+// Language: Clean
+
+listA :: [ T ]
+listA =  [ e \\ e <-: arrGen ]
 ```
 
 Python equivalent:
@@ -49,21 +51,21 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[any] = []
+listA: list[any] = []
 for e in lsGen:
-	x.append(e)
+	listA.append(e)
 ```
 
 ### Nesting Generators
 
-Commas (`,`) are used to join generators by nesting.
+Commas (`,`) are used to join generators by nesting them.
 The right-most generator is the fastest.
 
 ```Clean
 // Language: Clean
 
-x :: [ ( T, K ) ]
-x =  [ ( eX, eY ) \\ 
+listB :: [ ( T, K ) ]
+listB =  [ ( eX, eY ) \\ 
     eX <- lsGenX , 
     eY <- lsGenY 
 ]
@@ -74,22 +76,22 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[tuple[any, any]] = []
+listB: list[tuple[any, any]] = []
 for eX in lsGenX:
 	for eY in lsGenY:
-		x.append((eX, eY))
+		listB.append( (eX, eY) )
 ```
 
 ### Zipping Generators
 
-Ampersands (`&`) are used to join generators by zipping.
+Ampersands (`&`) are used to join generators by zipping them.
 Iteration stops as soon as one generator runs out of element.
 
 ```Clean
 // Language: Clean
 
-x :: [ ( T, K ) ]
-x =  [ ( eX, eY ) \\ 
+listC :: [ ( T, K ) ]
+listC =  [ ( eX, eY ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY
 ]
@@ -100,22 +102,23 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[tuple[any, any]] = []
+listC: list[tuple[any, any]] = []
 for eX, eY in zip(lsGenX, lsGenY):
-	x.append((eX, eY))
+	listC.append( (eX, eY) )
 ```
 
 ### Nesting and Zipping Generators
 
+Commas (`,`) and ampersands (`&`) can be used together to join generators.
 Ampersands bind more tightly than commas when joining generators.
 
-Example 1:
+#### Example 1 
 
 ```Clean
 // Langauge: Clean
 
-x :: [ ( T, K, V ) ]
-x =  [ ( eX, eY, eZ ) \\ 
+listDa :: [ ( T, K, V ) ]
+listDa =  [ ( eX, eY, eZ ) \\ 
     eX <- lsGenX & 
     eY <- lsGenY , 
     eZ <- lsGenZ
@@ -127,19 +130,19 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[tuple[any, any, any]] = []
+listDa: list[tuple[any, any, any]] = []
 for eX, eY in zip(lsGenX, lsGenY):
 	for eZ in lsGenZ:
-		x.append((eX, eY, eZ))
+		listDa.append( (eX, eY, eZ) )
 ```
 
-Example 2:
+#### Example 2
 
 ```Clean
 // Langauge: Clean
 
-x :: [ ( T, K, V ) ]
-x =  [ ( eX, eY, eZ ) \\ 
+listDb :: [ ( T, K, V ) ]
+listDb =  [ ( eX, eY, eZ ) \\ 
     eX <- lsGenX , 
     eY <- lsGenY & 
     eZ <- lsGenZ 
@@ -151,22 +154,22 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[tuple[any, any, any]] = []
+listDb: list[tuple[any, any, any]] = []
 for eX in lsGenX:
 	for eY, eZ in zip(lsGenY, lsGenZ):
-		x.append((eX, eY, eZ))
+		listDb.append( (eX, eY, eZ) )
 ```
 
 ### Conditional Iteration
 
 A condition can be introduced after each generator.
-An iteration is skipped if it fails to satisfy the condition.
+When the condition fails, the current iteration is skipped.
 
 ```Clean
 // Langauge: Clean
 
-x :: [ T ]
-x =  [ e \\ e <- lsGen | pred e ]
+listE :: [ T ]
+listE =  [ e \\ e <- lsGen | pred e ]
 ```
 
 Python equivalent:
@@ -174,11 +177,11 @@ Python equivalent:
 ```Python
 # Language: Python
 
-x: list[any] = []
+listE: list[any] = []
 for e in lsGen:
 	if not pred(e):
 		continue
-	x.append(e)
+	listE.append(e)
 ```
 
 ### Conditional Iteration in Nested Generators
